@@ -4,11 +4,18 @@ module.exports = {
     browser: true,
     node: true
   },
+  parserOptions: {
+      "parser": "@typescript-eslint/parser"
+  },
   extends: [
-    '@nuxtjs/eslint-config-typescript',
-    'plugin:nuxt/recommended'
+      "plugin:vue/essential",
+      "eslint:recommended",
+      "@vue/typescript"
   ],
   // add your custom rules here
   rules: {
+      "no-console": "on",
+      "no-debugger": "off",
+      "quotes": ["warn","single"]
   }
 }

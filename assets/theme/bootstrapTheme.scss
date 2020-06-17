@@ -1,0 +1,19 @@
+
+//Colors
+$dark: #232733;
+$primary: orange;
+
+
+
+$enable-shadows: true;
+
+
+.shadow-lg{
+  box-shadow:  22px 22px 44px #161921, -22px -22px 44px #303545;
+}
+
+
+
+// Include Bootstrap and BootstrapVue SCSS files
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-vue/src/index.scss';
