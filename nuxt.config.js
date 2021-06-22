@@ -71,24 +71,24 @@ export default {
     '@nuxt/content',
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
-    {
-      bootstrapCSS: false,
-      bootstrapVueCSS: false,
-      directivePlugins: ['VBScrollspyPlugin'],
-      components: [
-        'BLink',
-        'BRow',
-        'BCol',
-        'BContainer',
-        'BJumbotron',
-        'BImg',
-        'BImgLazy',
-        'BNavbar',
-        'BNavbarNav',
-        'BNavbarBrand',
-        'BNavbarToggle'
-      ]
-    }
+    // {
+    //   bootstrapCSS: false,
+    //   bootstrapVueCSS: false,
+    //   directivePlugins: ['VBScrollspyPlugin'],
+    //   components: [
+    //     'BLink',
+    //     'BRow',
+    //     'BCol',
+    //     'BContainer',
+    //     'BJumbotron',
+    //     'BImg',
+    //     'BImgLazy',
+    //     'BNavbar',
+    //     'BNavbarNav',
+    //     'BNavbarBrand',
+    //     'BNavbarToggle'
+    //   ]
+    // }
   ],
   /*
   ** Axios module configuration
