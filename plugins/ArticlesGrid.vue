@@ -1,0 +1,127 @@
+<template>
+  <div id="articles">
+    <a :href="'/blog/'+article.slug"  v-for="article of articles" :key="article.slug">
+      <div class="articleCard">
+        <div class="coverImage" :style="{backgroundImage: `url('${article.cover}')`}"></div>
+        <div class="content">
+          <h2 class="mt-2">{{article.title}}</h2>
+          <p class="mt-2">{{article.description}}</p>
+          <footer>
+            <div>
+              <b-badge variant="primary">{{article.category}}</b-badge>
+            </div>
+            <p>{{article.createdAt}}</p>
+          </footer>
+        </div>
+      </div>
+    </a>
+    <h2 v-if="articles.length == 0">No articles found</h2>
+  </div>
+</template>
+
+<script lang="ts">
+import Vue from 'vue'
+import {formatDateDDMMYYYY as formatDate} from "@/plugins/utils";
+
+
+export default Vue.extend({
+  props: {
+    fulltextSearch: {
+      type: String,
+      required: false
+    },
+    selectedCategories: {
+      type: Array,
+      required: false,
+      default: () => []
+    },
+    numberOfPosts: {
+      type: Number,
+      required: false
+    }
+  },
+
+  data(){return {
+    articles: []
+  }},
+
+  mounted() {
+    this.fetchArticles()
+  },
+
+  methods: {
+    async fetchArticles() {
+      const fields = ['title', 'description', 'slug', 'cover', 'category', 'updatedAt', 'createdAt']
+      let content = this.$content('blog/articles')
+      if(this.selectedCategories.length) {
+        content = content.where({category: {$contains: this.selectedCategories}})
+      }
+      if(this.fulltextSearch) {
+        content = content.search('title', this.fulltextSearch)
+      }
+      this.articles = this.formatDateInArticles(await content.only(fields).fetch())
+    },
+
+    formatDateInArticles(articles) {
+      return articles.map((article) => ({...article, createdAt: formatDate(article.createdAt)}) )
+    }
+
+  },
+  watch: {
+    selectedCategories:{
+      deep: true,
+      handler() { this.fetchArticles() }
+    },
+    fulltextSearch(){this.fetchArticles()}
+  }
+
+})
+</script>
+
+<style lang="sass" scoped>
+a
+  text-decoration: none
+  *
+    text-decoration: none
+#articles
+  display: flex
+  width: 100%
+  flex-direction: column
+  .articleCard
+    margin-bottom: 20px
+    width: 100%
+    background: #394053
+    border-radius: 15px
+    padding: 20px
+    color: white
+    display: flex
+    .coverImage
+      width: 300px
+      height: 250px
+      flex: 1
+      background: white
+      background-position: center
+      background-size: cover
+      border-radius: 15px
+    .content
+      padding-left: 20px
+      flex: 2
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+      flex-direction: column
+      footer
+        border-top: solid rgba(255,255,255, 0.3) 2px
+        padding-top: 10px
+        width: 100%
+        display: flex
+        justify-content: space-between
+    @media only screen and (max-width: 700px)
+      flex-direction: column
+      .coverImage
+        flex: none
+        width: 100%
+      .content
+        flex: none
+
+</style>
