@@ -3,7 +3,12 @@
     <div id="banner" class="mb-4">
       <div id="content">
         <p id="title">Matthew Poruben</p>
-        <h2>Digital Creator</h2>
+        <h2>Emphasize - Empower - Build</h2>
+        <h4>
+          <a style="margin-right: 20px" href="#articles">Articles</a>
+          <a style="margin-right: 20px" href="#descContainer">Me</a>
+          <a style="margin-right: 20px" href="#story">Story</a>
+        </h4>
         <div id="socialButtons" class="mt-4">
           <a href="https://github.com/Mporuben">
             <b-button class="mr-4 border-0 shadow-lg" variant="dark">
@@ -15,41 +20,36 @@
               <img alt="instagram" class="socilIcon" src="@/assets/icons/logo-instagram.svg">
             </b-button>
           </a>
-          <a href="https://twitter.com/matthewporuben">
-            <b-button class="mr-4 border-0 shadow-lg" variant="dark">
-              <img alt="twitter" class="socilIcon" src="@/assets/icons/logo-twitter.svg">
-            </b-button>
-          </a>
           <a href="https://www.linkedin.com/in/matthew-porueben/">
             <b-button class="mr-4 border-0 shadow-lg" variant="dark">
-              <img alt="linkedin" class="socilIcon" src="@/assets/icons/logo-linkedin.svg">
+              <img loading="lazy" alt="linkedin" class="socilIcon" src="@/assets/icons/logo-linkedin.svg">
             </b-button>
           </a>
         </div>
       </div>
-      <div id="sideBanner" class="shadow"><p>Emphasize</p><p>Empower</p> <p>Build</p></div>
+    </div>
+
+
+    <div id="articles">
+      <div id="title">
+        <h1>Articles</h1>
+        <a href="/blog">More articles ></a>
+      </div>
+      <articles-grid/>
     </div>
 
     <div id="descContainer" class="mb-5">
       <div id="desc" class="shadow-lg">
         <div id="photo"></div>
         <div id="text">
-          <p>
-            Hi my name is Matt and I'm a software engineer from Slovakia. I love using my creativity
-            for creating software and developing new technological / art experience. My dream is that
-            one day thousands of people will find joy in my creations, regardless if its just a line
-            of code in your alarm app or a application for company size of Google.
-          </p>
+          <p><nuxt-content :document="descriptionContent"/></p>
         </div>
-
       </div>
     </div>
 
     <div id="story">
       <h1>My Story</h1>
-
       <storyStep v-for="(step, i) of storyContent.steps" :key="step.title" :story="step" :index="i" />
-
     </div>
 
   </div>
@@ -59,21 +59,22 @@
   import Vue from 'vue'
 
   import storyStep from '@/plugins/storyStep.vue'
-
-  Vue.component('story-step', storyStep)
+  import articlesGrid from "@/plugins/ArticlesGrid.vue";
 
   export default Vue.extend({
     components: {
-      storyStep
+      storyStep,
+      articlesGrid
     },
 
     data(){return {
       storyContent: '',
+      descriptionContent: ''
     }},
-
 
     async mounted() {
       this.storyContent = await this.$content('story').fetch()
+      this.descriptionContent = await this.$content('homeDescription').fetch()
     }
 
   })
@@ -81,55 +82,40 @@
 
 <style lang="sass" scoped>
   #banner
-   width: 100%
-   height: 100vh
-   display: flex
-   justify-content: center
-   align-items: center
-   #content
-    margin: 0px 200px 100px 0px
-    @media only screen and (max-width: 800px)
-      text-align: center
-      margin: 0px
-    #title
-      font-size: 4em
-      @media only screen and (max-width: 800px)
-        font-size: 2em
-    h2
-      @media only screen and (max-width: 800px)
-        font-size: 1.5em
-    #socialButtons
-      .socilIcon
-        width: 50px
-        height: 50px
-        @media only screen and (max-width: 800px)
-          width: 40px
-          height: 40px
-  #sideBanner
-    z-index: 30
-    width: 80%
-    height: 200px
-    position: absolute
-    bottom: 10vh
-    left: 0px
-    border-radius: 0px 100px 100px 0px
-    background: var(--primary)
+    width: 100%
+    height: 70vh
     display: flex
+    padding-top: 150px
+    justify-content: center
     align-items: center
-    justify-content: flex-end
-    padding-right: 100px
-    padding-top: 20px
-    @media only screen and (max-width: 700px)
-      height: 100px
-      width: 90%
-      padding-right: 50px
-    p
-      padding: 0px 20px
-      color: var(--dark)
-      font-size: 1.8em
-      @media only screen and (max-width: 700px)
-        padding: 0px 5px
-        font-size: 1.2em
+    #content
+      margin: 0px 200px 100px 0px
+      @media only screen and (max-width: 800px)
+        text-align: center
+        margin: 0px
+      #title
+        font-size: 4em
+        @media only screen and (max-width: 800px)
+          font-size: 2em
+      h2
+        @media only screen and (max-width: 800px)
+          font-size: 1.5em
+      #socialButtons
+        .socilIcon
+          width: 50px
+          height: 50px
+          @media only screen and (max-width: 800px)
+            width: 40px
+            height: 40px
+
+  #articles
+    max-width: 1200px
+    margin: 0 auto
+    margin-bottom: 100px
+    #title
+      margin-bottom: 20px
+      margin-left: 5px
+
   #descContainer
     width: 100%
     display: flex
