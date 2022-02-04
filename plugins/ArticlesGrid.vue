@@ -22,9 +22,12 @@
 <script lang="ts">
 import Vue from 'vue'
 import {formatDateDDMMYYYY as formatDate} from "@/plugins/utils";
-
+import {BBadge} from "bootstrap-vue";
 
 export default Vue.extend({
+  components: {
+    BBadge
+  },
   props: {
     fulltextSearch: {
       type: String,

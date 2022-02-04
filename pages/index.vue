@@ -60,11 +60,13 @@
 
   import storyStep from '@/plugins/storyStep.vue'
   import articlesGrid from "@/plugins/ArticlesGrid.vue";
+  import {BButton} from "bootstrap-vue";
 
   export default Vue.extend({
     components: {
       storyStep,
-      articlesGrid
+      articlesGrid,
+      BButton,
     },
 
     data(){return {
@@ -83,9 +85,8 @@
 <style lang="sass" scoped>
   #banner
     width: 100%
-    height: 70vh
+    height: 100vh
     display: flex
-    padding-top: 150px
     justify-content: center
     align-items: center
     #content
@@ -136,7 +137,7 @@
         height: auto
       #photo
         border-radius: 30px
-        background-image: url('../assets/images/me.jpg')
+        background-image: url('../assets/images/me.webp')
         background-size: cover
         background-position: center
       #text

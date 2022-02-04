@@ -2,7 +2,7 @@
   <div id="blog">
     <aside id="sideBar">
       <div id="sideCard" bg-variant="dark">
-        <b-input placeholder="Search" v-model="fulltext"></b-input>
+        <b-form-input placeholder="Search" v-model="fulltext"></b-form-input>
         <br/>
         <b-form-checkbox
           v-for="category of categories"
@@ -20,11 +20,13 @@
 <script lang="ts">
 import Vue from 'vue'
 import ArticlesGrid from "@/plugins/ArticlesGrid.vue";
-
+import {BFormInput, BFormCheckbox} from "bootstrap-vue";
 
 export default Vue.extend({
   components: {
-    ArticlesGrid
+    BFormInput,
+    BFormCheckbox,
+    ArticlesGrid,
   },
 
   data(){ return {

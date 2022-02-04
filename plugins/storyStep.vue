@@ -21,8 +21,13 @@
 
 <script lang="ts">
   import Vue from 'vue'
+  import { BCard, BCardText} from "bootstrap-vue";
 
   export default Vue.extend({
+    components: {
+      BCard,
+      BCardText,
+    },
 
     props: {
       index: {
