@@ -1,29 +1,10 @@
-
-
-
-
-
 export default {
 
   target: 'static',
 
-  // server: {
-  //   host: '192.168.100.159'
-  // },
-
   /*
   ** Headers of the page
   */
-
-  build: {
-    analyze: true,
-    // or
-    analyze: {
-      analyzerMode: 'static'
-    }
-  },
-
-
   head: {
     title: 'Matthew Poruben',
     meta: [
@@ -63,38 +44,23 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
     '@nuxt/content',
+
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
-    // {
-    //   bootstrapCSS: false,
-    //   bootstrapVueCSS: false,
-    //   directivePlugins: ['VBScrollspyPlugin'],
-    //   components: [
-    //     'BLink',
-    //     'BRow',
-    //     'BCol',
-    //     'BContainer',
-    //     'BJumbotron',
-    //     'BImg',
-    //     'BImgLazy',
-    //     'BNavbar',
-    //     'BNavbarNav',
-    //     'BNavbarBrand',
-    //     'BNavbarToggle'
-    //   ]
-    // }
   ],
-  /*
-  ** Axios module configuration
-  ** See https://axios.nuxtjs.org/options
-  */
-  axios: {},
+
+  bootstrapVue: {
+    bootstrapCSS: false, // Or `css: false`
+    bootstrapVueCSS: false, // Or `bvCSS: false`
+    componentPlugins: ['NavbarPlugin'],
+    directivePlugins: [],
+    components: [],
+    directives: []
+  },
   /*
   ** Build configuration
   */
@@ -102,6 +68,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
+    analyze: process.argv.includes("--analyse"),
     extend (config, ctx) {}
   }
 }
