@@ -1,9 +1,9 @@
 ---
-title: BRRRM
-description: BRRRM algaksjdglka sgklajsdg kljasklg aslgjalsdgj alsdjgklasjd gasdjglasd glkasjg asdjg aslgjalskdgjal;sd gasd gjasgjaoisdjg aljgklasjdg asdgkasd gajsdklgs
-cover: https://www.iucn.org/sites/dev/files/content/images/2020/shutterstock_1458128810.jpg
-preview: https://www.iucn.org/sites/dev/files/content/images/2020/shutterstock_1458128810.jpg
-slug: BRRRM
+title: Test
+description: Test algaksjdglka sgklajsdg kljasklg aslgjalsdgj alsdjgklasjd gasdjglasd glkasjg asdjg aslgjalskdgjal;sd gasd gjasgjaoisdjg aljgklasjdg asdgkasd gajsdklgs
+cover: /images/blog/cover.png
+preview: /images/blog/preview.png
+slug: Test
 category: Technology
 ---
 
