@@ -9,23 +9,8 @@
           <a style="margin-right: 20px" href="#descContainer">Me</a>
           <a style="margin-right: 20px" href="#story">Story</a>
         </h4>
-        <div id="socialButtons" class="mt-4">
-          <a href="https://github.com/Mporuben">
-            <b-button class="mr-4 border-0 shadow-lg" variant="dark">
-              <img alt="github" class="socilIcon" src="@/assets/icons/logo-github.svg">
-            </b-button>
-          </a>
-          <a href="https://www.instagram.com/matthewporuben/">
-            <b-button class="mr-4 border-0 shadow-lg" variant="dark">
-              <img alt="instagram" class="socilIcon" src="@/assets/icons/logo-instagram.svg">
-            </b-button>
-          </a>
-          <a href="https://www.linkedin.com/in/matthew-porueben/">
-            <b-button class="mr-4 border-0 shadow-lg" variant="dark">
-              <img loading="lazy" alt="linkedin" class="socilIcon" src="@/assets/icons/logo-linkedin.svg">
-            </b-button>
-          </a>
-        </div>
+
+        <ContactButtons/>
       </div>
     </div>
 
@@ -62,11 +47,14 @@
   import articlesGrid from "@/plugins/ArticlesGrid.vue";
   import {BButton} from "bootstrap-vue";
 
+  import ContactButtons from '@/plugins/ContactButtons.vue'
+
   export default Vue.extend({
     components: {
       storyStep,
       articlesGrid,
       BButton,
+      ContactButtons,
     },
 
     data(){return {
@@ -101,13 +89,6 @@
       h2
         @media only screen and (max-width: 800px)
           font-size: 1.5em
-      #socialButtons
-        .socilIcon
-          width: 50px
-          height: 50px
-          @media only screen and (max-width: 800px)
-            width: 40px
-            height: 40px
 
   #articles
     max-width: 1200px
