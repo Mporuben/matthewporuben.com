@@ -1,10 +1,8 @@
 export default {
 
-  target: 'static',
+  target: 'spa',
 
-  /*
-  ** Headers of the page
-  */
+  // Headers of the page
   head: {
     title: 'Matthew Poruben',
     meta: [
@@ -16,33 +14,32 @@ export default {
       { rel: 'icon', type: 'image/png', href: '/favicon.png', sizes: "32x32" }
     ]
   },
-  /*
-  ** Customize the progress-bar color
-  */
+  // Customize the progress-bar color
   loading: { color: '#fff' },
-  /*
-  ** Global CSS
-  */
+
+  // Global CSS
   css: [
     '@/assets/theme/bootstrapTheme.scss',
     '@/assets/theme/generalRules.sass',
   ],
-  /*
-  ** Plugins to load before mounting the App
-  */
+  // Plugins to load before mounting the App
+
   plugins: [],
-  /*
-  ** Nuxt.js dev-modules
-  */
+  // Nuxt.js dev-modules
   buildModules: [
     '@nuxt/typescript-build',
     ['@nuxtjs/google-analytics', {
       id: process.env.GOOGLE_ANALYTICS_ID
     }]
   ],
-  /*
-  ** Nuxt.js modules
-  */
+  generate: {
+    async routes () {
+      const { $content } = require('@nuxt/content')
+      const files = await $content('blog/articles').fetch()
+      return files.map(file =>  `blog/${file.slug}`)
+    }
+  },
+  //Nuxt.js modules
   modules: [
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
@@ -61,9 +58,7 @@ export default {
     components: [],
     directives: []
   },
-  /*
-  ** Build configuration
-  */
+  //  Build configuration
   build: {
     /*
     ** You can extend webpack config here
