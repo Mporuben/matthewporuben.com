@@ -1,6 +1,6 @@
 <template>
   <div id="articles">
-    <a :href="'/blog/'+article.slug"  v-for="article of articles" :key="article.slug">
+    <router-link :to="'/blog/'+article.slug"  v-for="article of articles" :key="article.slug">
       <div class="articleCard">
         <div class="coverImage" :style="{backgroundImage: `url('${article.cover}')`}"></div>
         <div class="content">
@@ -14,7 +14,7 @@
           </footer>
         </div>
       </div>
-    </a>
+    </router-link>
     <h2 v-if="articles.length == 0">No articles found</h2>
   </div>
 </template>
