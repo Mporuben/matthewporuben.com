@@ -5,11 +5,9 @@
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
-          <b-navbar-nav>
-            <b-nav-item><router-link class="link" to="/">Home</router-link></b-nav-item>
-            <b-nav-item><router-link class="link" to="/about">About</router-link></b-nav-item>
-            <b-nav-item><router-link class="link" to="/blog">Blog</router-link></b-nav-item>
-          </b-navbar-nav>
+          <router-link class="link" to="/"><div class="link-item">Home</div></router-link>
+          <router-link class="link" to="/about"><div class="link-item">About</div></router-link>
+          <router-link class="link" to="/blog"><div class="link-item">Blog</div></router-link>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -32,4 +30,7 @@
     .link
       color: white !important
       text-decoration: none
+      .link-item
+        padding: 10px
+
 </style>

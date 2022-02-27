@@ -1,20 +1,16 @@
 <template >
   <div id="story" :style="storyOrientation">
-
     <div id="spacer" />
-
     <div id="yearBorder">
       <div id="year">
         <span>{{story.date}}</span>
       </div>
     </div>
-
     <b-card id="card" :title="story.title" >
       <b-card-text>
         <p>{{story.description}}</p>
       </b-card-text>
     </b-card>
-
   </div>
 </template>
 

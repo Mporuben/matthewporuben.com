@@ -28,6 +28,7 @@ export default Vue.extend({
   components: {
     BBadge
   },
+
   props: {
     fulltextSearch: {
       type: String,

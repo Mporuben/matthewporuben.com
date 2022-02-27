@@ -50,6 +50,7 @@ export default Vue.extend({
 <style lang="sass" scoped>
   #blog
     width: 90%
+    min-height: 80vh
     max-width: 1200px
     margin: 0 auto
     padding-top: 100px

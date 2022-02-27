@@ -1,6 +1,6 @@
 export default {
 
-  target: 'spa',
+  target: 'static',
 
   // Headers of the page
   head: {

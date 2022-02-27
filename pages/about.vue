@@ -1,7 +1,7 @@
 <template>
   <div id="about">
     <div id="content">
-      <nuxt-content :document="content"/>
+      <nuxt-content :document="content"></nuxt-content>
     </div>
   </div>
 </template>
@@ -11,13 +11,15 @@ import Vue from 'vue'
 
 export default Vue.extend({
 
+  asyncData ({ $content, params }) {
+    //@ts-ignore
+    return $content('about').fetch().then((content) => ({content}))
+  },
+
+
   data() { return {
     content: ''
   }},
-
-  async mounted() {
-    this.content = await this.$content('about').fetch()
-  }
 
 })
 </script>
@@ -30,4 +32,5 @@ export default Vue.extend({
    #content
     width: 90%
     max-width: 700px
+    padding-bottom: 50px
 </style>

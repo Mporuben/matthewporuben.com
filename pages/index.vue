@@ -9,12 +9,9 @@
           <a style="margin-right: 20px" href="#descContainer">Me</a>
           <a style="margin-right: 20px" href="#story">Story</a>
         </h4>
-
         <ContactButtons/>
       </div>
     </div>
-
-
     <div id="articles">
       <div id="title">
         <h1>Articles</h1>
@@ -22,28 +19,29 @@
       </div>
       <articles-grid/>
     </div>
-
-    <div id="descContainer" class="mb-5">
-      <div id="desc" class="shadow-lg">
-        <div id="photo"></div>
-        <div id="text">
-          <p><nuxt-content :document="descriptionContent"/></p>
+    <client-only>
+      <div id="descContainer" class="mb-5">
+        <div id="desc" class="shadow-lg">
+          <div id="photo"></div>
+          <div id="text">
+            <p>
+              <nuxt-content :document="descriptionContent"/>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-
-    <div id="story">
-      <h1>My Story</h1>
-      <storyStep v-for="(step, i) of storyContent.steps" :key="step.title" :story="step" :index="i" />
-    </div>
-
+      <div id="story">
+        <h1>My Story</h1>
+        <StoryStep v-for="(step, i) of storyContent.steps" :key="step.title" :story="step" :index="i" />
+      </div>
+    </client-only>
   </div>
 </template>
 
 <script lang="ts">
   import Vue from 'vue'
 
-  import storyStep from '@/plugins/storyStep.vue'
+  import StoryStep from '~/plugins/StoryStep.vue'
   import articlesGrid from "@/plugins/ArticlesGrid.vue";
   import {BButton} from "bootstrap-vue";
 
@@ -51,21 +49,24 @@
 
   export default Vue.extend({
     components: {
-      storyStep,
+      StoryStep,
       articlesGrid,
       BButton,
       ContactButtons,
     },
 
-    data(){return {
-      storyContent: '',
-      descriptionContent: ''
-    }},
+    async asyncData ({ $content, params }) {
 
-    async mounted() {
-      this.storyContent = await this.$content('story').fetch()
-      this.descriptionContent = await this.$content('homeDescription').fetch()
-    }
+      const storyContent = await $content('story').fetch()
+      const descriptionContent = await $content('homeDescription').fetch()
+      //@ts-ignore
+      return { storyContent, descriptionContent }
+    },
+
+    data(){return {
+      storyContent: {},
+      descriptionContent: {}
+    }},
 
   })
 </script>
@@ -73,7 +74,8 @@
 <style lang="sass" scoped>
   #banner
     width: 100%
-    height: 100vh
+    height: 60vh
+    padding-top: 250px
     display: flex
     justify-content: center
     align-items: center
@@ -93,6 +95,7 @@
   #articles
     max-width: 1200px
     margin: 0 auto
+    padding: 20px
     margin-bottom: 100px
     #title
       margin-bottom: 20px

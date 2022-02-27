@@ -4,8 +4,8 @@
     <b-badge variant="primary">{{content.category}}</b-badge>
     <span>{{created}}</span>
     <p style="margin-top: 20px">{{content.description}}</p>
-    <img :src="content.cover" alt="cover" style="width: 100%; border-radius: 15px; margin: 10px 0px">
-    <nuxt-content :document="content"/>
+    <nuxt-image :src="content.cover" alt="cover" class="cover"  />
+    <nuxt-content :document="content"></nuxt-content>
     <footer>
       <span><b>created:</b> {{created}}</span>
       <br/>
@@ -23,12 +23,12 @@ export default Vue.extend( {
 
 
   head() {
-    return { title: this.title};
+    return { title: this.content.title};
   },
 
   asyncData ({ $content, params }) {
     //@ts-ignore
-    return $content(`blog/articles/${params.slug}`).fetch().then(({title}) => ({ title }))
+    return $content(`blog/articles/${params.slug}`).fetch().then((content) => ({content}))
   },
 
   components: {
@@ -38,10 +38,6 @@ export default Vue.extend( {
   data() {return {
     content: {}
   }},
-
-  async mounted() {
-    this.content = await this.$content(`blog/articles/${this.$route.params.slug}`).fetch()
-  },
 
   computed: {
     created() {
@@ -54,13 +50,20 @@ export default Vue.extend( {
 })
 </script>
 
-<style lang="sass" >
+<style lang="sass">
 
+pre
+  background: #eae8e1 !important
+  filter: invert(1)
 #article
   width: 90%
   max-width: 800px
   margin: 0 auto
   padding-top: 80px
+  .cover
+    width: 100%
+    border-radius: 15px
+    margin: 10px 0px
   footer
     width: 100%
     border-top: 1px white solid
