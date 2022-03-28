@@ -40,8 +40,6 @@
       storyOrientation() {
         return (this.index%2 == 0) ? {'flex-direction': 'row-reverse'} : {}
       }
-
-
     }
 
   })

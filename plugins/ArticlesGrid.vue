@@ -1,8 +1,8 @@
 <template>
   <div id="articles">
-    <router-link :to="'/blog/'+article.slug"  v-for="article of articles" :key="article.slug">
+    <router-link :to="'/blog/'+article.slug"  v-for="(article, i) in articles" :key="article.slug">
       <div class="articleCard">
-        <div class="coverImage" :style="{backgroundImage: `url('${article.cover}')`}"></div>
+        <div class="previewImage" :style="images[i]"></div>
         <div class="content">
           <h2 class="mt-2">{{article.title}}</h2>
           <p class="mt-2">{{article.description}}</p>
@@ -42,6 +42,12 @@ export default Vue.extend({
     numberOfPosts: {
       type: Number,
       required: false
+    }
+  },
+
+  computed:{
+    images() {
+      return this.articles.map((artc) => ({backgroundImage: `url('${this.$img(artc.cover, { width: '450px' })}')` }) )
     }
   },
 
@@ -99,7 +105,7 @@ a
     padding: 20px
     color: white
     display: flex
-    .coverImage
+    .previewImage
       width: 300px
       height: 250px
       flex: 1
@@ -122,7 +128,7 @@ a
         justify-content: space-between
     @media only screen and (max-width: 700px)
       flex-direction: column
-      .coverImage
+      .previewImage
         flex: none
         width: 100%
       .content

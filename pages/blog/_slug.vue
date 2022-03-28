@@ -4,7 +4,7 @@
     <b-badge variant="primary">{{content.category}}</b-badge>
     <span>{{created}}</span>
     <p style="margin-top: 20px">{{content.description}}</p>
-    <nuxt-image :src="content.cover" alt="cover" class="cover"  />
+    <nuxt-img :src="content.cover" alt="cover" class="cover" sizes="lg:800px"  format="webp"/>
     <nuxt-content :document="content"></nuxt-content>
     <footer>
       <span><b>created:</b> {{created}}</span>

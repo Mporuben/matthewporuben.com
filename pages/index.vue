@@ -19,10 +19,10 @@
       </div>
       <articles-grid/>
     </div>
-    <client-only>
+
       <div id="descContainer" class="mb-5">
         <div id="desc" class="shadow-lg">
-          <div id="photo"></div>
+          <div id="photo" :style="descriptionStyleImage"></div>
           <div id="text">
             <p>
               <nuxt-content :document="descriptionContent"/>
@@ -30,6 +30,7 @@
           </div>
         </div>
       </div>
+    <client-only>
       <div id="story">
         <h1>My Story</h1>
         <StoryStep v-for="(step, i) of storyContent.steps" :key="step.title" :story="step" :index="i" />
@@ -54,6 +55,14 @@
       BButton,
       ContactButtons,
     },
+    computed: {
+      descriptionStyleImage() {
+        const imgUrl = this.$img('/images/me.webp', { width: '700px' })
+        return {
+          backgroundImage: `url('${imgUrl}')`
+        }
+      }
+    },
 
     async asyncData ({ $content, params }) {
 
@@ -74,8 +83,8 @@
 <style lang="sass" scoped>
   #banner
     width: 100%
-    height: 60vh
-    padding-top: 250px
+    height: 100vh
+    padding-top: 50px
     display: flex
     justify-content: center
     align-items: center
@@ -121,7 +130,6 @@
         height: auto
       #photo
         border-radius: 30px
-        background-image: url('../assets/images/me.webp')
         background-size: cover
         background-position: center
       #text
