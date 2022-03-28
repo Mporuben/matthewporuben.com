@@ -27,6 +27,7 @@ export default {
   plugins: [],
   // Nuxt.js dev-modules
   buildModules: [
+    '@nuxt/image',
     '@nuxt/typescript-build',
     ['@nuxtjs/google-analytics', {
       id: process.env.GOOGLE_ANALYTICS_ID
@@ -48,6 +49,7 @@ export default {
 
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
+    '@nuxt/image',
   ],
 
   bootstrapVue: {
@@ -57,6 +59,16 @@ export default {
     directivePlugins: [],
     components: [],
     directives: []
+  },
+  image: {
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+    },
   },
   //  Build configuration
   build: {
