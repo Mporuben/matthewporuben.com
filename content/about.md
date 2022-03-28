@@ -3,7 +3,7 @@
 So... Who am I? I don't like long and boring BIO's full of buzz words. So I'll try to show you who am I on 
 some things that I care about.
 
-<img src="/images/me.jpeg" alt="me" width="100%" style="border-radius: 20px; margin-bottom: 10px"/>
+<nuxt-img src="/images/me.jpeg" alt="cover" class="cover" sizes="lg:700px" format="webp" style="border-radius: 20px; margin-bottom: 10px; width: 100%" ></nuxt-img>
 
 ## Teamwork & humanity
 It's most essential for me to provide value for people around me by doing my work. 
@@ -15,7 +15,7 @@ I am a huge fan of the web stack. I'm not talking only about "websites" but the 
 As a developer, I love sharpening tech stack and working towards simpler and more concise code. I'm also trying my know-how share with people. 
 I've multiple public presentations and workshops on the topic of front-end & it's architecture. 
 
-<img src="/images/2.png" alt="stage" width="100%" style="border-radius: 20px; margin-bottom: 10px"/>
+<nuxt-img src="/images/2.png" alt="cover" class="cover" sizes="lg:700px" format="webp" style="border-radius: 20px; margin-bottom: 10px; width: 100%" ></nuxt-img>
 
 ## Programming
 I've started programming when I was 15. Writing JS was fun for me since day 1. Now after more than 7 years, I've to say 
