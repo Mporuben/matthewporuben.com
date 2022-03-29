@@ -1,20 +1,22 @@
 <template>
   <div id="articles">
-    <router-link :to="'/blog/'+article.slug"  v-for="(article, i) in articles" :key="article.slug">
-      <div class="articleCard">
-        <div class="previewImage" :style="images[i]"></div>
-        <div class="content">
-          <h2 class="mt-2">{{article.title}}</h2>
-          <p class="mt-2">{{article.description}}</p>
-          <footer>
-            <div>
-              <b-badge variant="primary">{{article.category}}</b-badge>
-            </div>
-            <p>{{article.createdAt}}</p>
-          </footer>
+    <client-only>
+      <router-link :to="'/blog/'+article.slug"  v-for="(article, i) in articles" :key="article.slug">
+        <div class="articleCard">
+          <div class="previewImage" :style="images[i]"></div>
+          <div class="content">
+            <h2 class="mt-2">{{article.title}}</h2>
+            <p class="mt-2">{{article.description}}</p>
+            <footer>
+              <div>
+                <b-badge variant="primary">{{article.category}}</b-badge>
+              </div>
+              <p>{{article.createdAt}}</p>
+            </footer>
+          </div>
         </div>
-      </div>
-    </router-link>
+      </router-link>
+    </client-only>
     <h2 v-if="articles.length == 0">No articles found</h2>
   </div>
 </template>

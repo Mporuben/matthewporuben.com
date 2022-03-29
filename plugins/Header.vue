@@ -5,14 +5,26 @@
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
-          <router-link class="link" to="/"><div class="link-item">Home</div></router-link>
-          <router-link class="link" to="/about"><div class="link-item">About</div></router-link>
-          <router-link class="link" to="/blog"><div class="link-item">Blog</div></router-link>
+          <router-link class="link" to="/"><div @click="closeMenu" class="link-item">Home</div></router-link>
+          <router-link class="link" to="/about"><div @click="closeMenu" class="link-item">About</div></router-link>
+          <router-link class="link" to="/blog"><div @click="closeMenu" class="link-item">Blog</div></router-link>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
   </div>
 </template>
+
+<script>
+export default {
+
+  methods: {
+    closeMenu() {
+        this.$root.$emit('bv::toggle::collapse', 'nav-collapse')
+    }
+  }
+
+}
+</script>
 
 <style lang="sass" scoped>
   #top
