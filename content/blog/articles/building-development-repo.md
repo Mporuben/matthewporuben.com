@@ -10,9 +10,9 @@ category: Coding
 
 ## Intro
 There is a lot of buzz around Docker, and its ecosystem. Sometimes it's hard to get to the real reasoning behind all of these technologies.
-Lots of people are talking about Kubernetes, Docker, etc... But they don't talk about "WHY" to use it. From the outside perspective it sometimes
+Lots of people are talking about Kubernetes, Docker, etc... But they don't talk about WHY to use it. From the outside perspective it sometimes
 appears like a lot of buzzwords.
-This is why I wrote another article about "WHY" you should or should not use Docker development repo. You can find it
+This is why I wrote another article about WHY you should or should not use Docker development repo. You can find it
 [here](/blog/docker-development-repo)
 
 So what is a Docker development repo?
@@ -22,7 +22,8 @@ For example, if I'm building an e-shop my infrastructure could consist of these 
 - FE web application
 - BE API
 - DB
-  Development repo makes local setup of these 3 services easy as 3 commands.
+
+Development repo makes local setup of these 3 services easy as 3 commands.
 ```bash
 git clone {DEVELOPMENT_REPO_URL}
 ```

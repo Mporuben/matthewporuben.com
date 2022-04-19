@@ -15,6 +15,7 @@ You can find it [here](/blog/building-development-repo).
 Providing an easy development experience where a developer has to take care only of his application and doesn't have to care about the rest of the infrastructure.
 
 ## Why
+In this section, I would like to show you the thought process behind the decisions that lead to the development repo.
 
 ### Local development
 During development, it is important to be able to develop our applications independently of the rest of the infrastructure.
@@ -60,7 +61,7 @@ that problem is infrastructure configuration and composition. We probably want t
 development configuration across the team. In an ideal scenario, we want to be able to start the whole infrastructure
 from one point and without any complicated configuration. Luckily there is a tool that allows us to do such a
 thing it is called docker-compose. Docker-compose allows us to configure and run multiple containers in one place.
-We can create a configuration for running the whole company's infrastructure locally in one 'docker-compose.yml'.
+We can create a configuration for running the whole company's infrastructure locally in one `docker-compose.yml`.
 This is extremely convenient and also flexible as we can override the default setting and define some specific
 rules if our local setup needs such a thing. We can override these configs with `docker-compose.override.yml`.
 
