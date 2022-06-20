@@ -36,8 +36,6 @@ export default Vue.extend( {
     return $content(`blog/articles/${params.slug}`).fetch().then((content) => ({content}))
   },
 
-
-
   data() {return {
     content: {}
   }},

@@ -21,7 +21,6 @@ import ArticlesGrid from "@/plugins/ArticlesGrid.vue";
 import Input from '@/plugins/forms/Input.vue'
 import Checkbox from "~/plugins/forms/Checkbox.vue";
 
-
 export default Vue.extend({
   components: {
     Input,
@@ -40,33 +39,32 @@ export default Vue.extend({
   },
 
   computed:{
-      selectedCategories() {
-        console.log()
-        return this.categories.reduce((acc, el) => el.enabled ? acc.concat([el.value]) : acc, [])
-      }
+    selectedCategories() {
+      return this.categories.reduce((acc, el) => el.enabled ? acc.concat([el.value]) : acc, [])
+    }
   }
 })
 </script>
 
 <style lang="sass" scoped>
-  #blog
-    width: 90%
-    min-height: 80vh
-    max-width: 1200px
-    margin: 0 auto
-    padding-top: 100px
-    display: flex
+#blog
+  width: 90%
+  min-height: 80vh
+  max-width: 1200px
+  margin: 0 auto
+  padding-top: 100px
+  display: flex
+  @media only screen and (max-width: 900px)
+    flex-wrap: wrap
+  #sideBar
+    width: 300px
+    height: 200px
+    margin-right: 20px
     @media only screen and (max-width: 900px)
-      flex-wrap: wrap
-    #sideBar
-      width: 300px
-      height: 200px
-      margin-right: 20px
-      @media only screen and (max-width: 900px)
-        margin-right: 0px
-        width: 100%
-      #sideCard
-        padding: 20px
-        border-radius: 15px
-        background: #394053
+      margin-right: 0px
+      width: 100%
+    #sideCard
+      padding: 20px
+      border-radius: 15px
+      background: #394053
 </style>
