@@ -19,7 +19,6 @@ export default {
 
   // Global CSS
   css: [
-    '@/assets/theme/bootstrapTheme.scss',
     '@/assets/theme/generalRules.sass',
   ],
   // Plugins to load before mounting the App
@@ -48,18 +47,8 @@ export default {
     '@nuxt/content',
 
     // Doc: https://bootstrap-vue.js.org
-    'bootstrap-vue/nuxt',
     '@nuxt/image',
   ],
-
-  bootstrapVue: {
-    bootstrapCSS: false, // Or `css: false`
-    bootstrapVueCSS: false, // Or `bvCSS: false`
-    componentPlugins: ['NavbarPlugin'],
-    directivePlugins: [],
-    components: [],
-    directives: []
-  },
   image: {
     screens: {
       xs: 320,

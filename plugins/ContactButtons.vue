@@ -1,24 +1,24 @@
 <template>
   <div id="socialButtons" class="mt-4">
     <a href="https://github.com/Mporuben">
-      <b-button class="m-2 border-0 shadow-lg" variant="dark">
+      <Button class="m-2 border-0 shadow-lg" variant="dark">
         <img alt="github" class="socilIcon" src="@/assets/icons/logo-github.svg">
-      </b-button>
+      </Button>
     </a>
     <a href="https://www.instagram.com/matthewporuben/">
-      <b-button class="m-2 border-0 shadow-lg" variant="dark">
+      <Button class="m-2 border-0 shadow-lg" variant="dark">
         <img alt="instagram" class="socilIcon" src="@/assets/icons/logo-instagram.svg">
-      </b-button>
+      </Button>
     </a>
     <a href="https://www.linkedin.com/in/matthew-porueben/">
-      <b-button class="m-2 border-0 shadow-lg" variant="dark">
+      <Button class="m-2 border-0 shadow-lg" variant="dark">
         <img alt="linkedin" class="socilIcon" src="@/assets/icons/logo-linkedin.svg">
-      </b-button>
+      </Button>
     </a>
     <a href="mailto:matt@matthewporuben.com">
-      <b-button class="m-2 border-0 shadow-lg" variant="dark">
+      <Button class="m-2 border-0 shadow-lg" variant="dark">
         <img alt="email" class="socilIcon" src="@/assets/icons/mail.svg">
-      </b-button>
+      </Button>
     </a>
   </div>
 </template>
@@ -26,11 +26,11 @@
 <script lang="ts">
 
 import Vue from "vue";
-import {BButton} from "bootstrap-vue";
+import Button from "@/plugins/forms/Button.vue";
 
 export default Vue.extend({
   components: {
-    BButton,
+    Button,
   },
 })
 

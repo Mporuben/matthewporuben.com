@@ -33,7 +33,7 @@
     <client-only>
       <div id="story">
         <h1>My Story</h1>
-        <StoryStep v-for="(step, i) of storyContent.steps" :key="step.title" :story="step" :index="i" />
+        <StoryStep v-for="(step, i) of storyContent.steps" :key="`${step.title}_${i}`" :story="step" :index="i" />
       </div>
     </client-only>
   </div>
@@ -44,15 +44,14 @@
 
   import StoryStep from '~/plugins/StoryStep.vue'
   import articlesGrid from "@/plugins/ArticlesGrid.vue";
-  import {BButton} from "bootstrap-vue";
-
+  import Button from "~/plugins/forms/Button.vue";
   import ContactButtons from '@/plugins/ContactButtons.vue'
 
   export default Vue.extend({
     components: {
       StoryStep,
       articlesGrid,
-      BButton,
+      Button,
       ContactButtons,
     },
     computed: {

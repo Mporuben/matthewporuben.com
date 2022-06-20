@@ -6,25 +6,24 @@
         <span>{{story.date}}</span>
       </div>
     </div>
-    <b-card id="card" :title="story.title" >
-      <b-card-text>
-        <p>{{story.description}}</p>
-        <b-badge>{{story.role}}</b-badge>
-      </b-card-text>
-    </b-card>
+    <card id="card">
+      <h2>{{ story.title }}</h2>
+      <p>{{story.description}}</p>
+      <badge v-if="story.role">{{story.role}}</badge>
+    </card>
   </div>
 </template>
 
 
 <script lang="ts">
   import Vue from 'vue'
-  import { BCard, BCardText, BBadge} from "bootstrap-vue";
+  import Badge from '@/plugins/preview/Badge.vue'
+  import Card from '@/plugins/preview/Card.vue'
 
   export default Vue.extend({
     components: {
-      BCard,
-      BBadge,
-      BCardText,
+      Card,
+      Badge
     },
 
     props: {

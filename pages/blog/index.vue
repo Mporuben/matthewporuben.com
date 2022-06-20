@@ -1,16 +1,14 @@
 <template>
   <div id="blog">
     <aside id="sideBar">
-      <div id="sideCard" bg-variant="dark">
-        <b-form-input placeholder="Search" v-model="fulltext"></b-form-input>
+      <div id="sideCard">
+        <Input style="margin-bottom: 10px" placeholder="Search" v-model="fulltext"></Input>
         <br/>
-        <b-form-checkbox
+        <checkbox
           v-for="category of categories"
           :key="category.value"
           v-model="category.enabled"
-          :unchecked-value="false"
-          :value="true"
-        >{{ category.value }}</b-form-checkbox>
+        >{{ category.value }}</checkbox>
       </div>
     </aside>
     <articles-grid :fulltext-search="fulltext" :selected-categories="selectedCategories"/>
@@ -20,12 +18,14 @@
 <script lang="ts">
 import Vue from 'vue'
 import ArticlesGrid from "@/plugins/ArticlesGrid.vue";
-import {BFormInput, BFormCheckbox} from "bootstrap-vue";
+import Input from '@/plugins/forms/Input.vue'
+import Checkbox from "~/plugins/forms/Checkbox.vue";
+
 
 export default Vue.extend({
   components: {
-    BFormInput,
-    BFormCheckbox,
+    Input,
+    Checkbox,
     ArticlesGrid,
   },
 
@@ -41,6 +41,7 @@ export default Vue.extend({
 
   computed:{
       selectedCategories() {
+        console.log()
         return this.categories.reduce((acc, el) => el.enabled ? acc.concat([el.value]) : acc, [])
       }
   }

@@ -1,7 +1,7 @@
 <template>
   <div id="article">
     <h1>{{content.title}}</h1>
-    <b-badge variant="primary">{{content.category}}</b-badge>
+    <badge variant="primary">{{content.category}}</badge>
     <span>{{created}}</span>
     <p style="margin-top: 20px">{{content.description}}</p>
     <nuxt-img :src="content.cover" alt="cover" class="cover" sizes="lg:800px"  format="webp"/>
@@ -17,9 +17,14 @@
 <script lang="ts">
 import Vue from 'vue'
 import {formatDateDDMMYYYY as formatDate} from "@/plugins/utils";
-import {BBadge} from "bootstrap-vue";
+import Badge from "~/plugins/preview/Badge.vue";
+
 
 export default Vue.extend( {
+
+  components: {
+    Badge
+  },
 
 
   head() {
@@ -31,9 +36,7 @@ export default Vue.extend( {
     return $content(`blog/articles/${params.slug}`).fetch().then((content) => ({content}))
   },
 
-  components: {
-    BBadge
-  },
+
 
   data() {return {
     content: {}

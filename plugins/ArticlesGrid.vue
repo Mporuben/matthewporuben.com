@@ -9,7 +9,7 @@
             <p class="mt-2">{{article.description}}</p>
             <footer>
               <div>
-                <b-badge variant="primary">{{article.category}}</b-badge>
+                <badge>{{article.category}}</badge>
               </div>
               <p>{{article.createdAt}}</p>
             </footer>
@@ -24,11 +24,11 @@
 <script lang="ts">
 import Vue from 'vue'
 import {formatDateDDMMYYYY as formatDate} from "@/plugins/utils";
-import {BBadge} from "bootstrap-vue";
+import Badge from "~/plugins/preview/Badge.vue";
 
 export default Vue.extend({
   components: {
-    BBadge
+    Badge
   },
 
   props: {
