@@ -9,6 +9,7 @@
     <b-card id="card" :title="story.title" >
       <b-card-text>
         <p>{{story.description}}</p>
+        <b-badge>{{story.role}}</b-badge>
       </b-card-text>
     </b-card>
   </div>
@@ -17,11 +18,12 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  import { BCard, BCardText} from "bootstrap-vue";
+  import { BCard, BCardText, BBadge} from "bootstrap-vue";
 
   export default Vue.extend({
     components: {
       BCard,
+      BBadge,
       BCardText,
     },
 
@@ -38,7 +40,7 @@
 
     computed: {
       storyOrientation() {
-        return (this.index%2 == 0) ? {'flex-direction': 'row-reverse'} : {}
+        return (this.index%2 == 0) ? {'flex-direction': 'row-reverse', 'text-align': 'right'} : {'text-align': 'left'}
       }
     }
 
