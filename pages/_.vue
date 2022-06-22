@@ -7,14 +7,10 @@ import Vue from 'vue'
 
 export default Vue.extend({
 
-  layout: 'centered',
-
   asyncData ({ $content, params }) {
-    //@ts-ignore
-    console.log(params)
-    return $content(`pages/${params.page || 'index'}`).fetch().then((content) => {return ({content})})
+    const documentPath = `/pages/${params.pathMatch}/index`
+    return $content(documentPath).fetch().then((content) => ({content}))
   },
-
 
   data() { return {
     content: ''

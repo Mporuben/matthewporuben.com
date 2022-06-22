@@ -26,7 +26,6 @@ export default Vue.extend( {
     Badge
   },
 
-
   head() {
     return { title: this.content.title};
   },

@@ -24,10 +24,9 @@ export default Vue.extend({
     }
   },
 
-  async asyncData ({ $content, params }) {
-    const descriptionContent = await $content('components/homeDescription').fetch()
-    //@ts-ignore
-    return {descriptionContent }
+  fetchOnServer: true,
+  async fetch () {
+    this.descriptionContent = await this.$content('components/homeDescription').fetch()
   },
 
   data(){return {

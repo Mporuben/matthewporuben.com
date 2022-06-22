@@ -1,3 +1,6 @@
+---
+layout: 'centered'
+---
 
 # About me
 So... Who am I? I don't like long and boring BIO's full of buzz words. So I'll try to show you who am I on 

@@ -1,3 +1,5 @@
+import {$content} from "@nuxt/content";
+
 export default {
 
   target: 'static',
@@ -24,6 +26,7 @@ export default {
   // Plugins to load before mounting the App
 
   plugins: [],
+
   // Nuxt.js dev-modules
   buildModules: [
     '@nuxt/image',
@@ -35,18 +38,25 @@ export default {
   generate: {
     async routes () {
       const { $content } = require('@nuxt/content')
-      const files = await $content('blog/articles').fetch()
-      return files.map(file =>  `blog/${file.slug}`)
+      const pages = await $content('pages', { deep: true }).fetch()
+      const pagePaths = pages.map((page) => (page.path.replace('/pages', '').replace('index', '')))
+
+      const blogs = await $content('blog/articles').fetch()
+      const blogPaths = blogs.map(file => `/blog/article/${file.slug}`)
+      return [...pagePaths, ...blogPaths]
     }
   },
+
+  components: [
+    // Equivalent to { path: '~/components' }
+    '~/plugins',
+    { path: '~/plugins/', extensions: ['vue'] }
+  ],
   //Nuxt.js modules
   modules: [
     '@nuxtjs/pwa',
-    // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
     '@nuxt/content',
-
-    // Doc: https://bootstrap-vue.js.org
     '@nuxt/image',
   ],
   image: {
@@ -61,9 +71,6 @@ export default {
   },
   //  Build configuration
   build: {
-    /*
-    ** You can extend webpack config here
-    */
     analyze: process.argv.includes("--analyse"),
     extend (config, ctx) {}
   }

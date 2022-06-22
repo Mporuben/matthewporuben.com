@@ -2,7 +2,6 @@
   <client-only>
     <div id="story">
       <h1>My Story</h1>
-      <StorySteps />
       <div v-for="(step, i) of storyContent.steps" :key="`${step.title}_${i}`" class="story" :style="storyOrientation(i)">
         <div id="spacer" />
         <div id="yearBorder">
@@ -32,10 +31,12 @@
       Badge
     },
 
-    async asyncData ({ $content, params }) {
-      const storyContent = await $content('components/story').fetch()
-      //@ts-ignore
-      return { storyContent }
+
+    fetchOnServer: true,
+
+    async fetch () {
+      console.log('====>fetching')
+      this.storyContent = await this.$content('components/story').fetch()
     },
 
     data(){return {
