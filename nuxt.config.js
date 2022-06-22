@@ -44,7 +44,7 @@ export default {
       const blogs = await $content('blog/articles').fetch()
       const blogPaths = blogs.map(file => `/blog/articles/${file.slug}`)
 
-      return [...pagePaths, ...blogPaths].filter((page) => page == 'blog/articles')
+      return [...pagePaths, ...blogPaths].filter((page) => page != '/blog/articles/')
     }
   },
 
