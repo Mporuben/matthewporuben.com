@@ -42,8 +42,9 @@ export default {
       const pagePaths = pages.map((page) => (page.path.replace('/pages', '').replace('index', '')))
 
       const blogs = await $content('blog/articles').fetch()
-      const blogPaths = blogs.map(file => `/blog/article/${file.slug}`)
-      return [...pagePaths, ...blogPaths]
+      const blogPaths = blogs.map(file => `/blog/articles/${file.slug}`)
+
+      return [...pagePaths, ...blogPaths].filter((page) => page == 'blog/articles')
     }
   },
 

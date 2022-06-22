@@ -8,7 +8,15 @@ import Vue from 'vue'
 export default Vue.extend({
 
   asyncData ({ $content, params }) {
-    const documentPath = `/pages/${params.pathMatch}/index`
+    const applyRedirects = (path) => {
+      if(path.includes('blog/articles/')) {
+        return 'blog/articles'
+      }
+      return path
+    }
+
+    const documentPath = `/pages/${applyRedirects(params.pathMatch)}/index`
+    console.log(documentPath)
     return $content(documentPath).fetch().then((content) => ({content}))
   },
 

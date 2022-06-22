@@ -1,7 +1,7 @@
 <template>
   <div id="articles">
     <client-only>
-      <router-link :to="'/blog/article/'+article.slug"  v-for="(article, i) in articles" :key="article.slug">
+      <router-link :to="'/blog/articles/'+article.slug"  v-for="(article, i) in articles" :key="article.slug">
         <div class="articleCard">
           <div class="previewImage" :style="images[i]"></div>
           <div class="content">

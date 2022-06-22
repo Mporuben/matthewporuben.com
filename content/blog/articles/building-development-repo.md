@@ -13,7 +13,7 @@ There is a lot of buzz around Docker, and its ecosystem. Sometimes it's hard to 
 Lots of people are talking about Kubernetes, Docker, etc... But they don't talk about WHY to use it. From the outside perspective it sometimes
 appears like a lot of buzzwords.
 This is why I wrote another article about WHY you should or should not use Docker development repo. You can find it
-[here](blog/acticle/docker-development-repo)
+[here](blog/acticles/docker-development-repo)
 
 So what is a Docker development repo?
 

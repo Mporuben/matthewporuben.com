@@ -30,13 +30,16 @@ export default Vue.extend( {
     return { title: this.content.title};
   },
 
-  asyncData ({ $content, params }) {
-    //@ts-ignore
-    return $content(`blog/articles/${params.slug}`).fetch().then((content) => ({content}))
+  fetchOnServer: true,
+  async fetch () {
+    console.log(this.$route.path)
+    this.content = await this.$content(this.$route.path).fetch()
   },
 
   data() {return {
-    content: {}
+    content: {
+      cover: ''
+    }
   }},
 
   computed: {

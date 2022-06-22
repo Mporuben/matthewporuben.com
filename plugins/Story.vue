@@ -35,7 +35,6 @@
     fetchOnServer: true,
 
     async fetch () {
-      console.log('====>fetching')
       this.storyContent = await this.$content('components/story').fetch()
     },
 

@@ -9,7 +9,7 @@ category: Coding
 ## Intro
 This article is trying to explain the philosophy behind the development repo.
 I've also written a practical step-by-step guide on how to implement a development repo.
-You can find it [here](blog/article/building-development-repo).
+You can find it [here](blog/articles/building-development-repo).
 
 ## Goal
 Providing an easy development experience where a developer has to take care only of his application and doesn't have to care about the rest of the infrastructure.
