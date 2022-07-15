@@ -10,7 +10,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import ArticlesGrid from "~/plugins/ArticlesGrid.vue";
+import ArticlesGrid from "~/components/ArticlesGrid.vue";
 
 export default Vue.extend({
   components: {

@@ -16,7 +16,6 @@ export default Vue.extend({
     }
 
     const documentPath = `/pages/${applyRedirects(params.pathMatch)}/index`
-    console.log(documentPath)
     return $content(documentPath).fetch().then((content) => ({content}))
   },
 

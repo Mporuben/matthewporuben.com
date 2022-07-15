@@ -17,7 +17,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import {formatDateDDMMYYYY as formatDate} from "@/plugins/utils";
-import Badge from "~/plugins/preview/Badge.vue";
+import Badge from "~/components/preview/Badge.vue";
 
 
 export default Vue.extend( {

@@ -15,7 +15,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import ContactButtons from "@/plugins/ContactButtons.vue";
+import ContactButtons from "@/components/ContactButtons.vue";
 
 export default Vue.extend({
   components: {

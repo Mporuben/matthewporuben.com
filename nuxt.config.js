@@ -50,8 +50,8 @@ export default {
 
   components: [
     // Equivalent to { path: '~/components' }
-    '~/plugins',
-    { path: '~/plugins/', extensions: ['vue'] }
+    '~/components',
+    { path: '~/components/', extensions: ['vue'] }
   ],
   //Nuxt.js modules
   modules: [

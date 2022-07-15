@@ -26,7 +26,7 @@
 <script lang="ts">
 
 import Vue from "vue";
-import Button from "@/plugins/forms/Button.vue";
+import Button from "@/components/forms/Button.vue";
 
 export default Vue.extend({
   components: {

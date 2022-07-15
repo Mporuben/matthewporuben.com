@@ -22,8 +22,8 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  import Badge from '@/plugins/preview/Badge.vue'
-  import Card from '@/plugins/preview/Card.vue'
+  import Badge from '@/components/preview/Badge.vue'
+  import Card from '@/components/preview/Card.vue'
 
   export default Vue.extend({
     components: {

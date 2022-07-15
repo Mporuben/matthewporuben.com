@@ -17,9 +17,9 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import ArticlesGrid from "@/plugins/ArticlesGrid.vue";
-import Input from '@/plugins/forms/Input.vue'
-import Checkbox from "~/plugins/forms/Checkbox.vue";
+import ArticlesGrid from "@/components/ArticlesGrid.vue";
+import Input from '@/components/forms/Input.vue'
+import Checkbox from "~/components/forms/Checkbox.vue";
 
 export default Vue.extend({
   components: {
