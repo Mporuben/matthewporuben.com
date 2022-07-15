@@ -23,16 +23,11 @@
   </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 
-import Vue from "vue";
 import Button from "@/components/forms/Button.vue";
 
-export default Vue.extend({
-  components: {
-    Button,
-  },
-})
+
 
 </script>
 

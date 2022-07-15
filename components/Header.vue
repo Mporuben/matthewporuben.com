@@ -3,22 +3,16 @@
     <header id="top_bar" class="shadow-lg">
       <h3 style="line-height: 0" href="/">Matthew Poruben</h3>
       <div>
-        <router-link class="link" to="/"><div @click="closeMenu" class="link-item">Home</div></router-link>
-        <router-link class="link" to="/about"><div @click="closeMenu" class="link-item">About</div></router-link>
-        <router-link class="link" to="/blog"><div @click="closeMenu" class="link-item">Blog</div></router-link>
+        <router-link class="link" to="/"><div class="link-item">Home</div></router-link>
+        <router-link class="link" to="/about"><div class="link-item">About</div></router-link>
+        <router-link class="link" to="/blog"><div class="link-item">Blog</div></router-link>
       </div>
     </header>
   </div>
 </template>
 
-<script>
-export default {
-  methods: {
-    closeMenu() {
-        this.$root.$emit('bv::toggle::collapse', 'nav-collapse')
-    }
-  }
-}
+<script setup lang="ts">
+
 </script>
 
 <style lang="sass" scoped>

@@ -2,21 +2,20 @@
   <button :class="variant" @click="click"><slot></slot></button>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script lang="ts" setup>
+  import {defineEmits} from "@vue/runtime-core";
 
-export default Vue.extend({
-  props: {
+
+  const props = defineProps({
     variant: {type: String}
-  },
+  })
+  const emit = defineEmits(['input']);
 
 
-  methods: {
-    click(e) {
-      this.$emit('input', e)
-    }
+
+  const click = (e) =>  {
+    emit('input', e)
   }
-})
 </script>
 
 <style lang="sass" scoped>
