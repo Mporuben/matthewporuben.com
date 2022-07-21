@@ -3,7 +3,7 @@
     <Header/>
     <div id="page">
       <div id="content" :style="contentStyle">
-          <ContentDoc :path="`/pages`"/>
+          <ContentDoc :path="`/pages${$route.path}`"/>
       </div>
     </div>
     <Footer />
@@ -18,18 +18,16 @@ import Footer from "~/components/Footer.vue";
 import {computed, ref} from 'vue'
 import {useRoute} from "vue-router";
 
-const content = ref({})
+// const content = ref({})
 const route = useRoute()
 
 
-  const isContentSlim = computed(() => {
-    const slimRoutes = ['/about']
-    return slimRoutes.includes(route.path)
-  })
+const isContentSlim = computed(() => {
+  const slimRoutes = ['/about']
+  return slimRoutes.includes(route.path)
+})
 
-  const contentStyle = computed(() => {
-    return { 'max-width': isContentSlim ? '700px' : '' }
-  })
+const contentStyle = computed(() => ({ 'max-width': isContentSlim ? '700px' : '' }))
 
 // asyncData ({ $content, params }) {
 //   const applyRedirects = (path) => {

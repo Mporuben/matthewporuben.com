@@ -4,20 +4,12 @@
       <h1>Articles</h1>
       <a href="/blog">More articles ></a>
     </div>
-    <Articles-grid :numberOfPosts="2"/>
+    <articles-grid :numberOfPosts="2"/>
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script lang="ts" setup>
 import ArticlesGrid from "~/components/ArticlesGrid.vue";
-
-export default Vue.extend({
-  components: {
-    ArticlesGrid,
-  },
-
-})
 </script>
 
 

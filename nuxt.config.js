@@ -46,6 +46,12 @@ export default defineNuxtConfig({
   //   }
   // },
 
+
+  components: [{
+    path: '~/components/pageWidgets',
+    global: true
+  }],
+
   // components: [
   //   // Equivalent to { path: '~/components' }
   //   '~/components',

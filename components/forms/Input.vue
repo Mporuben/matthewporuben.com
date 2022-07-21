@@ -2,21 +2,20 @@
   <input :placeholder="placeholder" @input="update" :value="value" />
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script lang="ts" setup>
 
-export default Vue.extend({
-  props: {
+
+  const emit = defineEmits(['input'])
+
+  const props = defineProps({
     value: {type: String},
     placeholder: {type: String}
-  },
+  })
 
-  methods: {
-    update(e) {
-      this.$emit('input', e.target.value)
-    }
+  const update = (e) =>  {
+    emit('input', e.target.value)
   }
-})
+
 </script>
 
 <style lang="sass" scoped>

@@ -24,10 +24,7 @@
 </template>
 
 <script lang="ts" setup>
-
 import Button from "@/components/forms/Button.vue";
-
-
 
 </script>
 

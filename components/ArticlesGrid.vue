@@ -1,9 +1,9 @@
 <template>
   <div id="articles">
-    <client-only>
-      <router-link :to="'/blog/articles/'+article.slug"  v-for="(article, i) in articles" :key="article.slug">
+    <ContentList path="/blog/articles" v-slot="{ list }">
+      <router-link :to="'/blog/articles/'+article.slug"  v-for="(article, i) in list" :key="article.slug">
         <div class="articleCard">
-          <div class="previewImage" :style="images[i]"></div>
+          <div class="previewImage" ></div>
           <div class="content">
             <h2 class="mt-2">{{article.title}}</h2>
             <p class="mt-2">{{article.description}}</p>
@@ -16,22 +16,19 @@
           </div>
         </div>
       </router-link>
-    </client-only>
-    <h2 v-if="articles.length == 0">No articles found</h2>
+      <h2 v-if="list.length == 0">No articles found</h2>
+    </ContentList>
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script lang="ts" setup>
 import {formatDateDDMMYYYY as formatDate} from "@/plugins/utils";
 import Badge from "~/components/preview/Badge.vue";
+import {onMounted, watch} from "@vue/runtime-core";
+// import {computed} from "vue";
 
-export default Vue.extend({
-  components: {
-    Badge
-  },
 
-  props: {
+  const props = defineProps({
     fulltextSearch: {
       type: String,
       required: false
@@ -45,49 +42,41 @@ export default Vue.extend({
       type: Number,
       required: false
     }
-  },
+  })
 
-  computed:{
-    images() {
-      return this.articles.map((artc) => ({backgroundImage: `url('${this.$img(artc.cover, { width: '450px' })}')` }) )
-    }
-  },
 
-  data(){return {
-    articles: []
-  }},
 
-  mounted() {
-    this.fetchArticles()
-  },
+  // const images = computed(() =>  {
+  //   return articles.map((artc) => ({backgroundImage: `url('${this.$img(artc.cover, { width: '450px' })}')` }) )
+  // })
+  // const articles = []
 
-  methods: {
-    async fetchArticles() {
-      const fields = ['title', 'description', 'slug', 'cover', 'category', 'updatedAt', 'createdAt']
-      let content = this.$content('blog/articles')
-      if(this.selectedCategories.length) {
-        content = content.where({category: {$contains: this.selectedCategories}})
-      }
-      if(this.fulltextSearch) {
-        content = content.search('title', this.fulltextSearch)
-      }
-      this.articles = this.formatDateInArticles(await content.only(fields).fetch())
-    },
 
-    formatDateInArticles(articles) {
-      return articles.map((article) => ({...article, createdAt: formatDate(article.createdAt)}) )
-    }
+  // onMounted(() => {
+  //   fetchArticles()
+  // })
 
-  },
-  watch: {
-    selectedCategories:{
-      deep: true,
-      handler() { this.fetchArticles() }
-    },
-    fulltextSearch(){this.fetchArticles()}
-  }
+// const fetchArticles = async () => {
+//   const fields = ['title', 'description', 'slug', 'cover', 'category', 'updatedAt', 'createdAt']
+//   let content = this.$content('blog/articles')
+//
+//   if(props.selectedCategories.length) {
+//     content = content.where({category: {$contains: props.selectedCategories}})
+//   }
+//   if(props.fulltextSearch) {
+//     content = content.search('title', props.fulltextSearch)
+//   }
+//   this.articles = this.formatDateInArticles(await content.only(fields).fetch())
+// }
 
-})
+const formatDateInArticles = (articles) =>  {
+  return articles.map((article) => ({...article, createdAt: formatDate(article.createdAt)}) )
+}
+
+// watch(() => props.selectedCategories, fetchArticles,{deep: true})
+// watch(() => props.fulltextSearch , fetchArticles)
+
+
 </script>
 
 <style lang="sass" scoped>

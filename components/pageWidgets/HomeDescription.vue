@@ -1,10 +1,10 @@
 <template>
   <div id="descContainer" class="mb-5">
     <div id="desc" class="shadow-lg">
-      <div id="photo" :style="descriptionStyleImage"></div>
+<!--      <div id="photo" :style="descriptionStyleImage"></div>-->
       <div id="text">
         <p>
-          <nuxt-content :document="descriptionContent"/>
+          <slot></slot>
         </p>
       </div>
     </div>
@@ -12,28 +12,15 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import {computed} from 'vue'
 
-export default Vue.extend({
-  computed: {
-    descriptionStyleImage() {
-      const imgUrl = this.$img('/images/me.webp', { width: '700px' })
-      return {
-        backgroundImage: `url('${imgUrl}')`
-      }
-    }
-  },
+// const descriptionStyleImage = computed(() =>  {
+//   const imgUrl = this.$img('/images/me.webp', { width: '700px' })
+//   return {
+//     backgroundImage: `url('${imgUrl}')`
+//   }
+// })
 
-  fetchOnServer: true,
-  async fetch () {
-    this.descriptionContent = await this.$content('components/homeDescription').fetch()
-  },
-
-  data(){return {
-    descriptionContent: {}
-  }},
-
-})
 </script>
 
 <style lang="sass" scoped>

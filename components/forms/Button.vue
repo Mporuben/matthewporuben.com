@@ -11,8 +11,6 @@
   })
   const emit = defineEmits(['input']);
 
-
-
   const click = (e) =>  {
     emit('input', e)
   }

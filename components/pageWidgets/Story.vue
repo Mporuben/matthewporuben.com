@@ -1,8 +1,8 @@
 <template >
-  <client-only>
-    <div id="story">
-      <h1>My Story</h1>
-      <div v-for="(step, i) of storyContent.steps" :key="`${step.title}_${i}`" class="story" :style="storyOrientation(i)">
+  <div id="story">
+    <h1>My Story</h1>
+    <ContentQuery path="/components/story" v-slot="{ data }">
+      <div v-for="(step, i) of data[0].steps" :key="`${step.title}_${i}`" class="story" :style="storyOrientation(i)">
         <div id="spacer" />
         <div id="yearBorder">
           <div id="year">
@@ -15,42 +15,18 @@
           <badge v-if="step.role">{{step.role}}</badge>
         </card>
       </div>
-    </div>
-  </client-only>
+    </ContentQuery>
+  </div>
 </template>
 
-
-<script lang="ts">
-  import Vue from 'vue'
+<script lang="ts" setup>
   import Badge from '@/components/preview/Badge.vue'
   import Card from '@/components/preview/Card.vue'
 
-  export default Vue.extend({
-    components: {
-      Card,
-      Badge
-    },
+  const storyOrientation = (i) =>
+    (i % 2 == 0) ? {'flex-direction': 'row-reverse', 'text-align': 'right'} : {'text-align': 'left'}
 
-
-    fetchOnServer: true,
-
-    async fetch () {
-      this.storyContent = await this.$content('components/story').fetch()
-    },
-
-    data(){return {
-      storyContent: {},
-    }},
-
-    methods: {
-      storyOrientation(i) {
-        return (i % 2 == 0) ? {'flex-direction': 'row-reverse', 'text-align': 'right'} : {'text-align': 'left'}
-      }
-    }
-
-  })
 </script>
-
 
 <style scoped lang="sass">
 #story

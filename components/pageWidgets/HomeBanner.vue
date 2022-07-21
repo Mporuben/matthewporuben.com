@@ -13,16 +13,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script lang="ts" setup>
 import ContactButtons from "@/components/ContactButtons.vue";
-
-export default Vue.extend({
-  components: {
-    ContactButtons,
-  },
-
-})
 </script>
 
 <style scoped lang="sass">
