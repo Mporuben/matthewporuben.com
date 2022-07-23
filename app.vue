@@ -3,7 +3,7 @@
     <Header/>
     <div id="page">
       <div id="content" :style="contentStyle">
-          <ContentDoc :path="`/pages${$route.path}`"/>
+          <ContentDoc :path="getRoute($route)"/>
       </div>
     </div>
     <Footer />
@@ -11,35 +11,27 @@
 </template>
 
 <script lang="ts" setup>
-
 import Header from "~/components/Header.vue";
 import Footer from "~/components/Footer.vue";
 
-import {computed, ref} from 'vue'
+import {computed} from 'vue'
 import {useRoute} from "vue-router";
 
-// const content = ref({})
 const route = useRoute()
-
 
 const isContentSlim = computed(() => {
   const slimRoutes = ['/about']
   return slimRoutes.includes(route.path)
 })
 
-const contentStyle = computed(() => ({ 'max-width': isContentSlim ? '700px' : '' }))
+const getRoute = (_route) => {
+  if(_route.path.includes('/blog/articles')) {
+    return '/pages/blog/articles'
+  }
+  return `/pages${_route.path}`
+}
 
-// asyncData ({ $content, params }) {
-//   const applyRedirects = (path) => {
-//     if(path.includes('blog/articles/')) {
-//       return 'blog/articles'
-//     }
-//     return path
-//   }
-//
-//   const documentPath = `/pages/${applyRedirects(params.pathMatch)}/index`
-//   return $content(documentPath).fetch().then((content) => ({content}))
-// },
+const contentStyle = computed(() => ({ 'max-width': isContentSlim ? '700px' : '' }))
 
 </script>
 

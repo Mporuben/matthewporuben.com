@@ -1,1 +1,2 @@
-<ArticlePreview></ArticlePreview>
+
+:article-preview

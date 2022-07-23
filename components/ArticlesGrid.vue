@@ -1,7 +1,7 @@
 <template>
   <div id="articles">
     <ContentList path="/blog/articles" v-slot="{ list }">
-      <router-link :to="'/blog/articles/'+article.slug"  v-for="(article, i) in list" :key="article.slug">
+      <router-link :to="getLink(article._path)"  v-for="(article, i) in list" :key="article.slug">
         <div class="articleCard">
           <div class="previewImage" ></div>
           <div class="content">
@@ -44,6 +44,11 @@ import {onMounted, watch} from "@vue/runtime-core";
     }
   })
 
+
+  const getLink = (filePath: string) => {
+    const pathSplit = filePath.split('/')
+    return `/blog/articles/${pathSplit[pathSplit.length-1]}`
+  }
 
 
   // const images = computed(() =>  {
