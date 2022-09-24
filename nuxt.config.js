@@ -1,6 +1,4 @@
-import {$content} from "@nuxt/content";
 import {defineNuxtConfig} from "nuxt";
-
 
 export default defineNuxtConfig({
 
@@ -30,9 +28,9 @@ export default defineNuxtConfig({
   // plugins: [],
 
   // Nuxt.js dev-modules
-  // buildModules: [
-  //   '@nuxt/image',
-  // ],
+  buildModules: [
+    '@nuxt/image-edge',
+  ],
   // generate: {
   //   async routes () {
   //     const { $content } = require('@nuxt/content')
@@ -52,16 +50,10 @@ export default defineNuxtConfig({
     global: true
   }],
 
-  // components: [
-  //   // Equivalent to { path: '~/components' }
-  //   '~/components',
-  //   { path: '~/components/', extensions: ['vue'] }
-  // ],
-
   //Nuxt.js modules
   modules: [
     '@nuxt/content',
-    // '@nuxt/image',
+    '@nuxt/image-edge',
   ],
 
   image: {

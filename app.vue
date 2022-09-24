@@ -3,7 +3,7 @@
     <Header/>
     <div id="page">
       <div id="content" :style="contentStyle">
-          <ContentDoc :path="getRoute($route)"/>
+        <ContentDoc :path="getRoute($route)"/>
       </div>
     </div>
     <Footer />
@@ -24,11 +24,11 @@ const isContentSlim = computed(() => {
   return slimRoutes.includes(route.path)
 })
 
-const getRoute = (_route) => {
-  if(_route.path.includes('/blog/articles')) {
+const getRoute = ({path}) => {
+  if(path.includes('/blog/articles')) {
     return '/pages/blog/articles'
   }
-  return `/pages${_route.path}`
+  return `/pages${path}`
 }
 
 const contentStyle = computed(() => ({ 'max-width': isContentSlim ? '700px' : '' }))
