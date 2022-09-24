@@ -3,7 +3,7 @@
     <ContentList path="/_blog/articles" v-slot="{ list }">
       <router-link :to="getLink(article._path)"  v-for="(article, i) in list" :key="article.slug">
         <div class="articleCard">
-          <div class="previewImage" ></div>
+          <div class="previewImage" :style="getImage(article.cover)"></div>
           <div class="content">
             <h2 class="mt-2">{{article.title}}</h2>
             <p class="mt-2">{{article.description}}</p>
@@ -25,8 +25,7 @@
 import {formatDateDDMMYYYY as formatDate} from "@/utils/utils";
 import Badge from "~/components/preview/Badge.vue";
 import {onMounted, watch} from "@vue/runtime-core";
-// import {computed} from "vue";
-
+import {useImage} from "#image/composables";
 
   const props = defineProps({
     fulltextSearch: {
@@ -44,44 +43,20 @@ import {onMounted, watch} from "@vue/runtime-core";
     }
   })
 
+  const img = useImage()
 
   const getLink = (filePath: string) => {
     const pathSplit = filePath.split('/')
     return `/blog/articles/${pathSplit[pathSplit.length-1]}`
   }
 
+  const getImage = (cover) => {
+      return {backgroundImage: `url('${img(cover, { width: '450px' })}')` }
+  }
 
-  // const images = computed(() =>  {
-  //   return articles.map((artc) => ({backgroundImage: `url('${this.$img(artc.cover, { width: '450px' })}')` }) )
-  // })
-  // const articles = []
-
-
-  // onMounted(() => {
-  //   fetchArticles()
-  // })
-
-// const fetchArticles = async () => {
-//   const fields = ['title', 'description', 'slug', 'cover', 'category', 'updatedAt', 'createdAt']
-//   let content = this.$content('blog/articles')
-//
-//   if(props.selectedCategories.length) {
-//     content = content.where({category: {$contains: props.selectedCategories}})
-//   }
-//   if(props.fulltextSearch) {
-//     content = content.search('title', props.fulltextSearch)
-//   }
-//   this.articles = this.formatDateInArticles(await content.only(fields).fetch())
-// }
-
-const formatDateInArticles = (articles) =>  {
-  return articles.map((article) => ({...article, createdAt: formatDate(article.createdAt)}) )
-}
-
-// watch(() => props.selectedCategories, fetchArticles,{deep: true})
-// watch(() => props.fulltextSearch , fetchArticles)
-
-
+  const formatDateInArticles = (articles) =>  {
+    return articles.map((article) => ({...article, createdAt: formatDate(article.createdAt)}) )
+  }
 </script>
 
 <style lang="sass" scoped>

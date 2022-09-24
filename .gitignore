@@ -1,6 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 ### Node template
 # Logs
+
 /logs
 *.log
 npm-debug.log*
@@ -24,6 +25,7 @@ coverage
 
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
+
 
 # Bower dependency directory (https://bower.io/)
 bower_components
@@ -88,3 +90,5 @@ sw.*
 
 # Vim swap files
 *.swp
+
+.output

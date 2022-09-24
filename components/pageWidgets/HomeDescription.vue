@@ -11,19 +11,18 @@
   </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import {computed} from 'vue'
-// import {useImage} from "#image/composables";
+import {useImage} from "#image/composables";
 
-// const img = useImage()
+const img = useImage()
 
 const descriptionStyleImage = computed(() =>  {
-  // const imgUrl = img('/images/me.webp', { width: 700 })
+  const imgUrl = img('/images/me.webp', { width: 700 })
   return {
-    backgroundImage: `url('/images/me.jpg')`
+    backgroundImage: `url('${imgUrl}')`
   }
 })
-
 </script>
 
 <style lang="sass" scoped>
