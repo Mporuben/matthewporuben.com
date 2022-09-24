@@ -31,6 +31,17 @@ export default defineNuxtConfig({
   buildModules: [
     '@nuxt/image-edge',
   ],
+
+  //Nuxt.js modules
+  modules: [
+    '@nuxt/content',
+    '@nuxt/image-edge',
+  ],
+
+  content: {
+    documentDriven: true,
+  },
+
   // generate: {
   //   async routes () {
   //     const { $content } = require('@nuxt/content')
@@ -50,12 +61,6 @@ export default defineNuxtConfig({
     global: true
   }],
 
-  //Nuxt.js modules
-  modules: [
-    '@nuxt/content',
-    '@nuxt/image-edge',
-  ],
-
   image: {
     screens: {
       xs: 320,
@@ -66,6 +71,7 @@ export default defineNuxtConfig({
       xxl: 1536,
     },
   },
+
   //  Build configuration
   // build: {
   //   analyze: process.argv.includes("--analyse"),

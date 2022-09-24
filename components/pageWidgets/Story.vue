@@ -1,9 +1,8 @@
 <template >
   <div id="story">
-    {{props.story}}
     <h1>My Story</h1>
-    <ContentQuery path="/components/story" v-slot="{ data }">
-      <div v-for="(step, i) of data[0].steps" :key="`${step.title}_${i}`" class="story" :style="storyOrientation(i)">
+    <ContentQuery path="/components/story">
+      <div v-for="(step, i) of story" :key="`${step.title}_${i}`" class="story" :style="storyOrientation(i)">
         <div id="spacer" />
         <div id="yearBorder">
           <div id="year">
@@ -23,13 +22,17 @@
 <script lang="ts" setup>
   import Badge from '@/components/preview/Badge.vue'
   import Card from '@/components/preview/Card.vue'
+  import {computed} from "@vue/reactivity";
 
   const props = defineProps({
     story: {
-      type: Object,
-      default: () => []
+      type: String,
+      default: '[]'
     }
   })
+
+  //@ts-ignore
+  const story = computed(() => JSON.parse(props.story))
 
   const storyOrientation = (i) =>
     (i % 2 == 0) ? {'flex-direction': 'row-reverse', 'text-align': 'right'} : {'text-align': 'left'}

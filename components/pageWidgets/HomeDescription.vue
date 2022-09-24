@@ -1,7 +1,7 @@
 <template>
   <div id="descContainer" class="mb-5">
     <div id="desc" class="shadow-lg">
-<!--      <div id="photo" :style="descriptionStyleImage"></div>-->
+      <div id="photo" :style="descriptionStyleImage"></div>
       <div id="text">
         <p>
           <slot></slot>
@@ -14,17 +14,16 @@
 <script lang="ts">
 import {computed} from 'vue'
 
-// const descriptionStyleImage = computed(() =>  {
-//   const imgUrl = this.$img('/images/me.webp', { width: '700px' })
-//   return {
-//     backgroundImage: `url('${imgUrl}')`
-//   }
-// })
+const descriptionStyleImage = computed(() =>  {
+  const imgUrl = this.$img('/images/me.webp', { width: 700 })
+  return {
+    backgroundImage: `url('/images/me.webp')`
+  }
+})
 
 </script>
 
 <style lang="sass" scoped>
-
 #descContainer
   width: 100%
   display: flex
@@ -47,6 +46,7 @@ import {computed} from 'vue'
       border-radius: 30px
       background-size: cover
       background-position: center
+      background: rgba(255,255,255, 0.4)
     #text
       padding: 30px
       font-size: 1.5em

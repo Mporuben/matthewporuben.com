@@ -1,3 +1,7 @@
+---
+navigation:
+title: 'Home'
+---
 
 :home-banner
 

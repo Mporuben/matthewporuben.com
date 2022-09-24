@@ -6,6 +6,7 @@
       <badge variant="primary">{{doc.category}}</badge>
       <span>{{doc.created}}</span>
       <p style="margin-top: 20px">{{doc.description}}</p>
+
       <nuxt-img :src="doc.cover" alt="cover" class="cover" sizes="lg:800px"  format="webp"/>
       <ContentRenderer :value="doc" />
       <footer>
@@ -18,7 +19,7 @@
 </template>
 
 <script lang="ts" setup>
-  import {formatDateDDMMYYYY as formatDate} from "@/plugins/utils";
+  import {formatDateDDMMYYYY as formatDate} from "@/utils/utils";
   import Badge from "~/components/preview/Badge.vue";
   import {useRoute} from "vue-router";
 

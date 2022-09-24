@@ -1,12 +1,21 @@
 ---
 layout: 'centered'
+navigation:
+title: 'About'
 ---
 
 # About me
 So... Who am I? I don't like long and boring BIO's full of buzz words. So I'll try to show you who am I on 
 some things that I care about.
 
-<nuxt-img src="/images/me.jpeg" alt="cover" class="cover" sizes="lg:700px" format="webp" style="border-radius: 20px; margin-bottom: 10px; width: 100%" ></nuxt-img>
+:nuxt-img{
+  src='"/images/me.jpeg"' 
+  alt='"cover"'
+  class='"cover"' 
+  sizes='"lg:700px"' 
+  format='"webp"' 
+  style='"border-radius: 20px; margin-bottom: 10px; width: 100%"'
+}
 
 ## Teamwork & humanity
 It's most essential for me to provide value for people around me by doing my work. 

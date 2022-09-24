@@ -20,13 +20,14 @@
   import Checkbox from "@/components/forms/Checkbox.vue";
 
   const {data: categories} = await useAsyncData(async() => {
-    const {categories} = await queryContent('blog', 'categories').findOne()
+    const {categories} = await queryContent('_blog', 'categories').findOne()
     return categories.map((category) => ({value: category.title, enabled: false}))
   })
 
   const fulltext = ref('')
 
-  const selectedCategories = computed(() => categories.value.reduce((acc, el) => el.enabled ? acc.concat([el.value]) : acc, []))
+  const selectedCategories = computed(() =>
+    categories.value.reduce((acc, el) => el.enabled ? acc.concat([el.value]) : acc, []))
 
 </script>
 

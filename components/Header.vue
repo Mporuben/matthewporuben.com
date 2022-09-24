@@ -2,13 +2,18 @@
   <div id="top">
     <header id="top_bar" class="shadow-lg">
       <h3 style="line-height: 0" href="/">Matthew Poruben</h3>
-      <div>
-        <router-link class="link" to="/"><div class="link-item">Home</div></router-link>
-        <router-link class="link" to="/about"><div class="link-item">About</div></router-link>
-        <router-link class="link" to="/blog"><div class="link-item">Blog</div></router-link>
+      <div style="display: flex; flex-flow: row wrap;">
+        <ContentNavigation v-slot="{ navigation }">
+          <router-link v-for="link of navigation" :key="link._path" class="link" :to="link._path" :style="{order: navigation.order}">
+            <div class="link-item">{{link.title}}</div>
+          </router-link>
+        </ContentNavigation>
       </div>
+
     </header>
   </div>
+
+
 </template>
 
 <script setup lang="ts">

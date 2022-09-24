@@ -3,7 +3,7 @@
     <Header/>
     <div id="page">
       <div id="content" :style="contentStyle">
-        <ContentDoc :path="getRoute($route)"/>
+        <NuxtPage />
       </div>
     </div>
     <Footer />
@@ -11,11 +11,11 @@
 </template>
 
 <script lang="ts" setup>
-import Header from "~/components/Header.vue";
-import Footer from "~/components/Footer.vue";
-
 import {computed} from 'vue'
 import {useRoute} from "vue-router";
+
+import Header from "~/components/Header.vue";
+import Footer from "~/components/Footer.vue";
 
 const route = useRoute()
 
@@ -24,12 +24,6 @@ const isContentSlim = computed(() => {
   return slimRoutes.includes(route.path)
 })
 
-const getRoute = ({path}) => {
-  if(path.includes('/blog/articles')) {
-    return '/pages/blog/articles'
-  }
-  return `/pages${path}`
-}
 
 const contentStyle = computed(() => ({ 'max-width': isContentSlim ? '700px' : '' }))
 

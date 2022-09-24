@@ -1,6 +1,6 @@
 <template>
   <div id="articles">
-    <ContentList path="/blog/articles" v-slot="{ list }">
+    <ContentList path="/_blog/articles" v-slot="{ list }">
       <router-link :to="getLink(article._path)"  v-for="(article, i) in list" :key="article.slug">
         <div class="articleCard">
           <div class="previewImage" ></div>
@@ -22,7 +22,7 @@
 </template>
 
 <script lang="ts" setup>
-import {formatDateDDMMYYYY as formatDate} from "@/plugins/utils";
+import {formatDateDDMMYYYY as formatDate} from "@/utils/utils";
 import Badge from "~/components/preview/Badge.vue";
 import {onMounted, watch} from "@vue/runtime-core";
 // import {computed} from "vue";
