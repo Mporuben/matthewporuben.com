@@ -13,11 +13,14 @@
 
 <script lang="ts">
 import {computed} from 'vue'
+// import {useImage} from "#image/composables";
+
+// const img = useImage()
 
 const descriptionStyleImage = computed(() =>  {
-  const imgUrl = this.$img('/images/me.webp', { width: 700 })
+  // const imgUrl = img('/images/me.webp', { width: 700 })
   return {
-    backgroundImage: `url('/images/me.webp')`
+    backgroundImage: `url('/images/me.jpg')`
   }
 })
 

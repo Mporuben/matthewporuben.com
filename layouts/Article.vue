@@ -17,20 +17,20 @@
 </template>
 
 <script lang="ts" setup>
-  import {formatDateDDMMYYYY as formatDate} from "@/utils/utils";
-  import Badge from "~/components/preview/Badge.vue";
-  import {useRoute} from "vue-router";
+import {formatDateDDMMYYYY as formatDate} from "@/utils/utils";
+import Badge from "~/components/preview/Badge.vue";
+import {useRoute} from "vue-router";
 
-  const getSlugFromPath = (path) => {
-    const pathSplit = path.split('/')
-    return `/blog/articles/${pathSplit[pathSplit.length-1]}`
-  }
+const getSlugFromPath = (path) => {
+  const pathSplit = path.split('/')
+  return `/blog/articles/${pathSplit[pathSplit.length-1]}`
+}
 
-  //
-  // const created = computed(() =>  content.value.createdAt ? formatDate(content.value.createdAt): '')
-  //
-  //
-  // const updated = computed(() => content.value.updatedAt ? formatDate(content.value.updatedAt): '')
+//
+// const created = computed(() =>  content.value.createdAt ? formatDate(content.value.createdAt): '')
+//
+//
+// const updated = computed(() => content.value.updatedAt ? formatDate(content.value.updatedAt): '')
 
 </script>
 
