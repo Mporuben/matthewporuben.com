@@ -4,7 +4,13 @@
       <h3 style="line-height: 0" href="/">Matthew Poruben</h3>
       <div style="display: flex; flex-flow: row wrap;">
         <ContentNavigation v-slot="{ navigation }">
-          <router-link v-for="link of navigation" :key="link._path" class="link" :to="link._path" :style="{order: navigation.order}">
+          <router-link
+            :to="link._path"
+            v-for="link of navigation"
+            :key="link._path"
+            class="link"
+            :style="{order: navigation.order}"
+          >
             <div class="link-item">{{link.title}}</div>
           </router-link>
         </ContentNavigation>
@@ -12,8 +18,6 @@
 
     </header>
   </div>
-
-
 </template>
 
 <script setup lang="ts">
@@ -44,5 +48,4 @@
       float: left
       .link-item
         padding: 10px
-
 </style>

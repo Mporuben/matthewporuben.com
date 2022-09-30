@@ -12,7 +12,6 @@
 
 <script lang="ts" setup>
 import ContactButtons from "@/components/ContactButtons.vue";
-
 </script>
 
 <style lang="sass" scoped>

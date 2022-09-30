@@ -4,9 +4,6 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-</script>
-
 <style lang="sass" scoped>
 .card
   background: #394053

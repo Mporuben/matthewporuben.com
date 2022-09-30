@@ -26,10 +26,7 @@ const getSlugFromPath = (path) => {
   return `/blog/articles/${pathSplit[pathSplit.length-1]}`
 }
 
-//
 // const created = computed(() =>  content.value.createdAt ? formatDate(content.value.createdAt): '')
-//
-//
 // const updated = computed(() => content.value.updatedAt ? formatDate(content.value.updatedAt): '')
 
 </script>

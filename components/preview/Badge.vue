@@ -4,9 +4,6 @@
   </span>
 </template>
 
-<script lang="ts" setup>
-</script>
-
 <style lang="sass" scoped>
 .badge
   background:  rgb(235, 152, 0)

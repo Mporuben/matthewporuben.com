@@ -17,12 +17,11 @@ import {useImage} from "#image/composables";
 
 const img = useImage()
 
-const descriptionStyleImage = computed(() =>  {
-  const imgUrl = img('/images/me.webp', { width: 700 })
-  return {
-    backgroundImage: `url('${imgUrl}')`
-  }
-})
+const descriptionStyleImage = computed(() =>
+  ({
+    backgroundImage: `url('${img('/images/me.webp', { width: 700 })}')`
+  })
+)
 </script>
 
 <style lang="sass" scoped>
@@ -32,7 +31,7 @@ const descriptionStyleImage = computed(() =>  {
   justify-content: center
   align-items: center
   #desc
-    background: var(--dark)
+    background: #394053
     max-width: 1200px
     width: 90%
     height: 500px
