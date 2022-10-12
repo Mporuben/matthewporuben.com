@@ -1,7 +1,9 @@
 <template>
   <div id="top">
     <header id="top_bar">
-      <h3 style="line-height: 0" href="/">Matthew Poruben</h3>
+      <router-link to='/'>
+        <h3 style="line-height: 0" href="/">Matthew Poruben</h3>
+      </router-link>
       <div style="display: flex; flex-flow: row wrap;">
         <ContentNavigation v-slot="{ navigation }">
           <router-link
@@ -20,7 +22,6 @@
 </template>
 
 <script setup lang="ts">
-
 </script>
 
 <style lang="sass" scoped>
