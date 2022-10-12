@@ -1,5 +1,5 @@
 <template>
-  <div id="descContainer" class="mb-5">
+  <div id="descContainer">
     <div id="desc" class="shadow-lg">
       <div id="photo" :style="descriptionStyleImage"></div>
       <div id="text">

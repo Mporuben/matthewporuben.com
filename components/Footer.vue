@@ -4,8 +4,8 @@
       <div>
         <h4>Get in touch</h4>
         <ContactButtons/>
+        <p>© 2022 Matthew Poruben</p>
       </div>
-      <p>© 2022 Matthew Poruben</p>
     </div>
   </footer>
 </template>
@@ -20,14 +20,17 @@ import ContactButtons from "@/components/ContactButtons.vue";
     display: flex
     align-items: center
     justify-content: center
-    background: #394053
     padding: 10px
+    h4
+      font-size: 1.5em
+      line-height: 0
     #wrapper
-      margin: 50px 0px
-      width: 90%
       max-width: 900px
+      width: 90%
       display: flex
-      align-items: flex-start
-      justify-content: space-between
+      align-items: center
+      justify-content: center
+      text-align: center
+      border-top: 1px solid white
       flex-wrap: wrap
 </style>

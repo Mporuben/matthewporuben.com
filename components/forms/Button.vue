@@ -20,8 +20,10 @@
 button
   border: none
   padding: 5px
-  border-radius: 5px
-
-.dark
-  background: #232733
+  border-radius: 15px
+  cursor: pointer
+  display: flex
+  align-content: center
+  justify-content: center
+  background: var(--navy-light)
 </style>

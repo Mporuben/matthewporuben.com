@@ -5,9 +5,7 @@
       <h2>FE team lead</h2>
       <ContactButtons/>
     </div>
-    <div id="photo">
-
-    </div>
+    <div id="photo"></div>
   </div>
 </template>
 
@@ -44,6 +42,7 @@ import ContactButtons from "@/components/ContactButtons.vue";
         font-size: 2em
     h2
       margin-top: 0px
+      color: var(--primary)
       @media only screen and (max-width: 800px)
         font-size: 1.5em
 </style>

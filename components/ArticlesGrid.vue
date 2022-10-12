@@ -1,23 +1,23 @@
 <template>
   <div id="articles">
-    <ContentList path="/blog/articles" v-slot="{ list }">
-      <router-link :to="getLink(article._path)"  v-for="(article, i) in list" :key="article.slug">
+    <ContentQuery path="/blog/articles" v-slot="{ data }" :limit="limit">
+      <router-link :to="getLink(article._path)"  v-for="(article, i) in data" :key="article.slug">
         <div class="articleCard">
           <div class="previewImage" :style="getImage(article.cover)"></div>
           <div class="content">
-            <h2 class="mt-2">{{article.title}}</h2>
-            <p class="mt-2">{{article.description}}</p>
+            <h2>{{article.title}}</h2>
+            <p class="description">{{article.description}}</p>
             <footer>
               <div>
                 <badge>{{article.category}}</badge>
               </div>
-              <p>{{article.createdAt}}</p>
+              <span>{{article.createdAt}}22.12.2022</span>
             </footer>
           </div>
         </div>
       </router-link>
-      <h2 v-if="list.length == 0">No articles found</h2>
-    </ContentList>
+      <h2 v-if="data.length == 0">No articles found</h2>
+    </ContentQuery>
   </div>
 </template>
 
@@ -36,7 +36,7 @@ import {useImage} from "#image/composables";
       required: false,
       default: () => []
     },
-    numberOfPosts: {
+    limit: {
       type: Number,
       required: false
     }
@@ -67,16 +67,11 @@ a
   .articleCard
     margin-bottom: 20px
     width: 100%
-    background: #394053
-    border-radius: 15px
-    padding: 20px
     color: white
     display: flex
     .previewImage
-      width: 300px
-      height: 250px
-      flex: 1
-      background: white
+      height: 368px
+      flex: 2
       background-position: center
       background-size: cover
       border-radius: 15px
@@ -87,12 +82,19 @@ a
       justify-content: space-between
       align-items: flex-start
       flex-direction: column
+      .description
+        display: -webkit-box
+        max-width: 100%
+        -webkit-line-clamp: 6
+        -webkit-box-orient: vertical
+        overflow: hidden
       footer
         border-top: solid rgba(255,255,255, 0.3) 2px
         padding-top: 10px
         width: 100%
         display: flex
         justify-content: space-between
+        align-items: flex-start
     @media only screen and (max-width: 700px)
       flex-direction: column
       .previewImage
