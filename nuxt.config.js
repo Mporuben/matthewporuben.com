@@ -1,15 +1,10 @@
 import {defineNuxtConfig} from "nuxt";
 
 export default defineNuxtConfig({
+  // GENERAL 
   target: 'static',
-
   srcDir: './src',
-
-  // Global CSS
-  css: [
-    '~/assets/theme/main.sass',
-  ],
-
+  css: ['~/assets/theme/main.sass'],
   components: [{
     path: '~/components/pageWidgets',
     global: true
@@ -20,18 +15,19 @@ export default defineNuxtConfig({
     '@nuxt/image-edge',
   ],
 
-  //Nuxt.js modules
+  // Nuxt.js modules
   modules: [
     '@nuxt/content',
     '@nuxt/image-edge',
   ],
 
-  //NUXT_CONTENT
+
+  // NUXT CONTENT
   content: {
     documentDriven: true,
   },
 
-  //NUXT_IMAGE
+  // NUXT IMAGE
   image: {
     screens: {
       xs: 320,

@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "description": "matthewporuben.com website",
   "author": "Matthew Poruben",
-  "private": true,
   "scripts": {
     "dev": "nuxt dev",
-    "build": "nuxt build",
     "gen": "nuxt generate",
+    "build": "nuxt build",
     "start": "nuxt start"
   },
   "dependencies": {
@@ -15,10 +14,9 @@
   },
   "devDependencies": {
     "@nuxt/content": "^2.1.1",
-    "sass": "^1.54.8",
     "@nuxt/image-edge": "^1.0.0-27719579.87dcdf2",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/google-analytics": "^2.4.0",
-    "sass-loader": "^13.0.2"
+    "sass": "^1.54.8"
   }
 }
