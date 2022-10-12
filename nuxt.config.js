@@ -10,6 +10,11 @@ export default defineNuxtConfig({
     '~/assets/theme/main.sass',
   ],
 
+  components: [{
+    path: '~/components/pageWidgets',
+    global: true
+  }],
+
   // Nuxt.js dev-modules
   buildModules: [
     '@nuxt/image-edge',
@@ -21,15 +26,12 @@ export default defineNuxtConfig({
     '@nuxt/image-edge',
   ],
 
+  //NUXT_CONTENT
   content: {
     documentDriven: true,
   },
 
-  components: [{
-    path: '~/components/pageWidgets',
-    global: true
-  }],
-
+  //NUXT_IMAGE
   image: {
     screens: {
       xs: 320,
