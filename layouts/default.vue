@@ -6,6 +6,7 @@
 
 <style scoped lang="sass">
 #content
-  width: 90%
   padding-bottom: 50px
+  display: flex
+  justify-content: center
 </style>
