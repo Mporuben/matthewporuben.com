@@ -1,33 +1,36 @@
 import {defineNuxtConfig} from "nuxt";
 
 export default defineNuxtConfig({
-  // GENERAL 
+  // General 
   target: 'static',
+  
   srcDir: './src',
+  
   css: ['~/assets/theme/main.sass'],
+
   components: [{
     path: '~/components/pageWidgets',
     global: true
   }],
 
-  // Nuxt.js dev-modules
+  // Nuxt dev-modules
   buildModules: [
     '@nuxt/image-edge',
   ],
 
-  // Nuxt.js modules
+  // Nuxt modules
   modules: [
     '@nuxt/content',
     '@nuxt/image-edge',
   ],
 
 
-  // NUXT CONTENT
+  // Nuxt Content Config
   content: {
     documentDriven: true,
   },
 
-  // NUXT IMAGE
+  // Nuxt Image Config
   image: {
     screens: {
       xs: 320,
