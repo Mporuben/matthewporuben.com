@@ -1,6 +1,6 @@
 # Matthew Poruben
 
-> matthew poruben web
+> [matthewporuben.com]('http://matthewporuben.com')
 
 ## Build Setup
 
