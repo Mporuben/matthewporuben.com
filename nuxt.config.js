@@ -3,9 +3,11 @@ import {defineNuxtConfig} from "nuxt";
 export default defineNuxtConfig({
   target: 'static',
 
+  srcDir: './src',
+
   // Global CSS
   css: [
-    '@/assets/theme/main.sass',
+    '~/assets/theme/main.sass',
   ],
 
   // Nuxt.js dev-modules
