@@ -1,12 +1,12 @@
 <template>
   <div id="articles">
     <ContentQuery path="/blog/articles" v-slot="{ data }" :limit="limit">
-      <router-link :to="getLink(article._path)"  v-for="(article, i) in data" :key="article.slug">
-        <div class="articleCard">
+        <div class="articleCard" v-for="(article) in data" :key="article.slug">
           <div class="previewImage" :style="getImage(article.cover)"></div>
           <div class="content">
             <h2>{{article.title}}</h2>
             <p class="description">{{article.description}}</p>
+            <router-link :to="getLink(article._path)">Continue reading</router-link>
             <footer>
               <div>
                 <badge>{{article.category}}</badge>
@@ -15,7 +15,6 @@
             </footer>
           </div>
         </div>
-      </router-link>
       <h2 v-if="data.length == 0">No articles found</h2>
     </ContentQuery>
   </div>
@@ -65,7 +64,7 @@ a
   width: 100%
   flex-direction: column
   .articleCard
-    margin-bottom: 20px
+    margin-bottom: 30px
     width: 100%
     color: white
     display: flex

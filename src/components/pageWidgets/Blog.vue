@@ -2,7 +2,7 @@
   <div id="blog">
     <aside id="sideBar">
       <div id="sideCard">
-        <Input style="margin-bottom: 10px" placeholder="Search" v-model="fulltext"></Input>
+        <Input style="margin-bottom: 10px" placeholder="Search..." v-model="fulltext"></Input>
         <br/>
         <checkbox v-for="category of categories" :key="`categories-${category.value}`" v-model="category.enabled">
           {{ category.value }}
@@ -30,9 +30,8 @@
 
 <style lang="sass" scoped>
 #blog
-  width: 90%
   min-height: 80vh
-  max-width: 1200px
+  max-width: 90%
   margin: 0 auto
   padding-top: 100px
   display: flex

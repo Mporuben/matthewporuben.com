@@ -25,12 +25,13 @@ import ContactButtons from "@/components/ContactButtons.vue";
       font-size: 1.5em
       line-height: 0
     #wrapper
-      max-width: 900px
+      max-width: 500px
       width: 90%
+      background: #394053
+      border-radius: 20px
       display: flex
       align-items: center
       justify-content: center
       text-align: center
-      border-top: 1px solid white
       flex-wrap: wrap
 </style>

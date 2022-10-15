@@ -2,7 +2,7 @@
   <div id="article">
     <ContentDoc :path="getSlugFromPath($route.path)" v-slot="{doc}">
       <h1>{{doc.title}}</h1>
-      <badge variant="primary">{{doc.category}}</badge>
+      <Badge variant="primary">{{doc.category}}</Badge>
       <span>{{doc.created}}</span>
       <p style="margin-top: 20px">{{doc.description}}</p>
       <nuxt-img :src="doc.cover" alt="cover" class="cover" sizes="lg:800px"  format="webp"/>
@@ -17,17 +17,12 @@
 </template>
 
 <script lang="ts" setup>
-import {formatDateDDMMYYYY as formatDate} from "@/utils/utils";
 import Badge from "~/components/preview/Badge.vue";
-import {useRoute} from "vue-router";
 
 const getSlugFromPath = (path) => {
   const pathSplit = path.split('/')
   return `/blog/articles/${pathSplit[pathSplit.length-1]}`
 }
-
-// const created = computed(() =>  content.value.createdAt ? formatDate(content.value.createdAt): '')
-// const updated = computed(() => content.value.updatedAt ? formatDate(content.value.updatedAt): '')
 
 </script>
 

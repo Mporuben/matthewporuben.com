@@ -26,7 +26,7 @@ import ContactButtons from "@/components/ContactButtons.vue";
     position: relative
     top: -70px
     border-radius: 0px 0px 100px 100px
-    background-image: url("/images/me.jpg")
+    background-image: url("/images/IMG_0396.jpeg")
     background-size: cover
     background-position: center
   #content

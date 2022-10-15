@@ -21,7 +21,9 @@
 <style lang="sass" scoped>
   input
     border: none
-    padding: 5px
+    padding: 12px
+    background: var(--dark)
+    color: white
     border-radius: 5px
     width: 100%
 </style>

@@ -4,6 +4,7 @@ description: If you have ever dealt with a larger infrastructure that contains m
 cover: /images/blog/docker-development-repo/cover.png
 preview: /images/blog/docker-development-repo/cover.png
 category: Coding
+layout: article
 ---
 
 ## Intro

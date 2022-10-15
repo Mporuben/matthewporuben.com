@@ -33,7 +33,7 @@
     justify-content: center
     z-index: 100
     #top_bar
-      padding: 10px
+      padding: 10px 20px
       margin-top: 10px
       width: 90%
       box-shadow: 5px 5px 20px rgba(0,0,0,0.4)

@@ -11,7 +11,8 @@ export default defineNuxtConfig({
   components: [{
     path: '~/components/pageWidgets',
     global: true
-  }],
+  },
+  ],
 
   // Nuxt dev-modules
   buildModules: [

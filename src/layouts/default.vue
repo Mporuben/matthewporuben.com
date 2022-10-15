@@ -9,4 +9,5 @@
   padding-bottom: 50px
   display: flex
   justify-content: center
+  width: 100%
 </style>
