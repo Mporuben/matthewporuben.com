@@ -1,6 +1,11 @@
 <template>
   <div id="articles">
-    <ContentQuery path="/blog/articles" v-slot="{ data }" :limit="limit">
+    <ContentQuery 
+      path="/blog/articles" 
+      v-slot="{ data }" 
+      :limit="limit" 
+      :where="{title: {$lte: fulltextSearch}}"
+    >
         <div class="articleCard" v-for="(article) in data" :key="article.slug">
           <div class="previewImage" :style="getImage(article.cover)"></div>
           <div class="content">
@@ -40,6 +45,8 @@ import {useImage} from "#image/composables";
       required: false
     }
   })
+
+  watch(() =>props.fulltextSearch, ()=> console.log(props.fulltextSearch))
 
   const img = useImage()
 

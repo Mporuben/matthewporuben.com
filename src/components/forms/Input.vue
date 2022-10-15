@@ -1,19 +1,17 @@
 <template>
-  <input :placeholder="placeholder" @input="update" :value="value" />
+  <input :placeholder="placeholder" @input="update" :value="modelValue" />
 </template>
 
 <script lang="ts" setup>
-
-
-  const emit = defineEmits(['input'])
+  const emit = defineEmits(['update:modelValue'])
 
   const props = defineProps({
-    value: {type: String},
+    modelValue: {type: String},
     placeholder: {type: String}
   })
 
   const update = (e) =>  {
-    emit('input', e.target.value)
+    emit('update:modelValue', e.target.value)
   }
 
 </script>

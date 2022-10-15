@@ -24,6 +24,7 @@
     return categories.map((category) => ({value: category.title, enabled: false}))
   })
   const fulltext = ref('')
+
   const selectedCategories = computed(() =>
     categories.value.reduce((acc, el) => el.enabled ? acc.concat([el.value]) : acc, []))
 </script>
