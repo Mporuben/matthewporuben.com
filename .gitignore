@@ -88,3 +88,4 @@ sw.*
 *.swp
 
 .output
+dist.zip
