@@ -23,6 +23,7 @@ import Badge from "~/components/preview/Badge.vue";
 <style scoped lang="sass">
 #home-articles
   max-width: 1200px
+  width: 90%
   margin: 0 auto
   margin-top: 100px
   #title

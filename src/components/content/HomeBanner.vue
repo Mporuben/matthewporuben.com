@@ -24,14 +24,14 @@ const photoBackground = computed(() => {
 
 <style scoped lang="sass">
 #banner
-  width: 100vw
+  width: 100%
   height: 100vh
   display: flex
   justify-content: space-around
   align-items: center
   #photo
     width: 400px
-    height: 900px
+    height: 100%
     max-height: 100vh
     position: relative
     top: -70px
