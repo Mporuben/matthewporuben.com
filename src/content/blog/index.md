@@ -1,6 +1,6 @@
 ---
 navigation:
-  title: 'Blog'
+title: 'Blog'
 ---
 
 :blog

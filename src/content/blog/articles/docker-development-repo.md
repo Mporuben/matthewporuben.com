@@ -5,6 +5,7 @@ cover: /images/blog/docker-development-repo/cover.png
 preview: /images/blog/docker-development-repo/cover.png
 category: Coding
 layout: article
+createdAt: 9.1.2022
 ---
 
 ## Intro

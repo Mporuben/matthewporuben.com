@@ -7,6 +7,7 @@ cover: /images/blog/building-development-repo/cover.png
 preview: /images/blog/building-development-repo/preview.png
 category: Coding
 layout: article
+createdAt: 28.2.2022
 ---
 
 ## Intro
