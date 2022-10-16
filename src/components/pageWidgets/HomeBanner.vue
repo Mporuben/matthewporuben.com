@@ -17,7 +17,7 @@ const img = useImage()
 
 const photoBackground = computed(() => {
   return {
-    backgroundImage: `url('${img('/images/IMG_0396.jpeg', { width: 700, format: 'webp' })}')`
+    backgroundImage: `url('/images/IMG_0396.webp')`
   }
 })
 </script>

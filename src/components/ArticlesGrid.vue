@@ -55,7 +55,7 @@ import {useImage} from "#image/composables";
     return `/blog/articles/${pathSplit[pathSplit.length-1]}`
   }
 
-  const getImage = (cover) => ({backgroundImage: `url('${img(cover, { width: '550px', format: 'webp' })}')` })
+  const getImage = (cover) => ({backgroundImage: `url('${cover}')` })
 
   const formatDateInArticles = (articles) =>
     articles.map((article) => ({...article, createdAt: formatDate(article.createdAt)}) )

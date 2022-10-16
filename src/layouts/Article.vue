@@ -5,7 +5,7 @@
       <Badge variant="primary">{{doc.category}}</Badge>
       <span>{{doc.created}}</span>
       <p style="margin-top: 20px">{{doc.description}}</p>
-      <nuxt-img :src="doc.cover" alt="cover" class="cover" sizes="lg:800px"  format="webp"/>
+      <img :src="doc.cover" style="width: 800px"/>
       <ContentRenderer :value="doc" />
       <footer>
         <span><b>created:</b> {{doc.created}}</span>

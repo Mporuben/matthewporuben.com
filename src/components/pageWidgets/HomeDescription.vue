@@ -19,7 +19,7 @@ const img = useImage()
 
 const descriptionStyleImage = computed(() =>
   ({
-    backgroundImage: `url('${img('/images/me.webp', { width: 700 })}')`
+    backgroundImage: `url('/images/me.webp')`
   })
 )
 </script>
