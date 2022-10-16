@@ -1,9 +1,7 @@
 <template >
   <div id="story">
-    <h1>My Story</h1>
     <ContentQuery path="/components/story">
       <div v-for="(step, i) of story" :key="`${step.title}_${i}`" class="story" :style="storyOrientation(i)">
-        <div id="spacer" />
         <div id="yearBorder">
           <div id="year">
             <span>{{step.date}}</span>
@@ -35,23 +33,19 @@
   const story = computed(() => JSON.parse(props.story))
 
   const storyOrientation = (i) =>
-    (i % 2 == 0) ? {'flex-direction': 'row-reverse', 'text-align': 'right'} : {'text-align': 'left'}
+    ({'text-align': 'left'})
 
 </script>
 
 <style scoped lang="sass">
 #story
-  margin: 150px auto
+  margin: 50px auto
   max-width: 900px
-  text-align: center
+  text-align: left
   .story
-    display: flex
-    justify-content: space-between
-
-    #spacer
-      width: 40%
-      @media only screen and (max-width: 800px)
-        width: 0%
+    display: grid
+    grid-template-columns: 150px auto
+    margin-bottom: 20px
 
     #yearBorder
       padding: 5px
@@ -59,7 +53,6 @@
       border-radius: 50%
       width: 120px
       height: 120px
-      margin: 0px 20px
       @media only screen and (max-width: 800px)
         width: 100px
         height:  100px
@@ -70,7 +63,6 @@
         height:  80px
         font-size: 0.6em
         margin: 0px 6px
-
       #year
         height: 100%
         width: 100%
@@ -82,7 +74,7 @@
         line-height: 0
     #card
       background: #394053
-      width: 40%
+      width: 100%
       border-radius: 20px
       @media only screen and (max-width: 800px)
         width: 70%
