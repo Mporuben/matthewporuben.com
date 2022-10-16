@@ -4,10 +4,11 @@
       <h2>Blog</h2>
       <h3>I’m writing articles about coding </h3>
       <div style="display: flex">
-        <div style="background: rgba(255,255,255,0.1); display: flex; border-radius: 5px; padding: 5px">
-          All articles
-          <badge style="margin-left: 5px">10</badge>
-        </div>
+        <router-link to="/blog">
+          <div style="background: rgba(255,255,255,0.1); display: flex; border-radius: 5px; padding: 5px">
+            All articles
+          </div>
+        </router-link>
       </div>
     </div>
     <articles-grid :limit="1"/>

@@ -3,8 +3,8 @@
     <ContentQuery 
       path="/blog/articles" 
       v-slot="{ data }" 
-      :limit="limit" 
-      :where="{title: {$lte: fulltextSearch}}"
+      :limit="limit"
+      :only="['title', 'description', 'cover', '_path', 'category', 'createdAt']"
     >
         <div class="articleCard" v-for="(article) in data" :key="article.slug">
           <div class="previewImage" :style="getImage(article.cover)"></div>
