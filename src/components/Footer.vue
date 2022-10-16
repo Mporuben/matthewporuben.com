@@ -27,8 +27,6 @@ import ContactButtons from "@/components/ContactButtons.vue";
     #wrapper
       max-width: 500px
       width: 90%
-      background: #394053
-      border-radius: 20px
       display: flex
       align-items: center
       justify-content: center

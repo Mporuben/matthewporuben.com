@@ -5,12 +5,10 @@
       <Badge variant="primary">{{doc.category}}</Badge>
       <span>{{doc.created}}</span>
       <p style="margin-top: 20px">{{doc.description}}</p>
-      <img :src="doc.cover" style="width: 800px"/>
+      <img :src="doc.cover" style="width: 720px; border-radius: 20px"/>
       <ContentRenderer :value="doc" />
       <footer>
-        <span><b>created:</b> {{doc.created}}</span>
-        <br/>
-        <span><b>updated:</b> {{doc.updated}}</span>
+        <span><b>created:</b> {{doc.createdAt}}</span>
       </footer>
     </ContentDoc>
   </div>
@@ -42,7 +40,7 @@ pre
     margin: 10px 0px
   footer
     width: 100%
-    border-top: 1px white solid
+    border-top: 1px rgba(255,255,255,0.2) solid
     padding-top: 10px
     margin-bottom: 50px
   pre

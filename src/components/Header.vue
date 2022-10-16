@@ -34,8 +34,9 @@
     z-index: 100
     #top_bar
       padding: 10px 20px
-      margin-top: 10px
       width: 95%
+      max-width: 1200px
+      margin-top: 10px
       box-shadow: 5px 5px 20px rgba(0,0,0,0.4)
       border-radius: 10px
       background: #394053

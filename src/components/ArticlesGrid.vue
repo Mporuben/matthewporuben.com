@@ -95,7 +95,7 @@ a
         -webkit-box-orient: vertical
         overflow: hidden
       footer
-        border-top: solid rgba(255,255,255, 0.3) 2px
+        border-top: solid rgba(255,255,255, 0.1) 2px
         padding-top: 10px
         width: 100%
         display: flex

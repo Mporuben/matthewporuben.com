@@ -2,16 +2,11 @@
   <div id="home-articles">
     <div id="title">
       <h2>Blog</h2>
-      <h3>I’m writing articles about coding </h3>
       <div style="display: flex">
-        <router-link to="/blog">
-          <div style="background: rgba(255,255,255,0.1); display: flex; border-radius: 5px; padding: 5px">
-            All articles
-          </div>
-        </router-link>
       </div>
     </div>
     <articles-grid :limit="1"/>
+    <router-link to="/blog"><div id="all-articles">All articles > </div></router-link>
   </div>
 </template>
 
@@ -35,4 +30,12 @@ import Badge from "~/components/preview/Badge.vue";
       font-size: 1.5em
     margin-bottom: 20px
     margin-left: 5px
+  #all-articles
+    background: var(--navy-light)
+    display: flex
+    border-radius: 5px
+    padding: 5px
+    color: white
+    justify-content: center
+
 </style>
