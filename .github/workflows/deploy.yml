@@ -13,4 +13,4 @@ jobs:
       - name: Generating static assets
         run: npm run gen
       - name: Zip builded assets
-        zip -r dist.zip ./dist
+        run: zip -r dist.zip ./dist
