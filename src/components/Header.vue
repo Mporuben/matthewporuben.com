@@ -2,7 +2,7 @@
   <div id="top">
     <header id="top_bar">
       <router-link to='/'>
-        <h3 style="line-height: 0" href="/">MP</h3>
+        <strong><h3 style="line-height: 0" href="/">MP</h3></strong>
       </router-link>
       <div style="display: flex; flex-flow: row wrap;">
         <ContentNavigation v-slot="{ navigation }">
