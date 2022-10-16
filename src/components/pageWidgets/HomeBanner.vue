@@ -5,12 +5,21 @@
       <h2>FE team lead</h2>
       <ContactButtons/>
     </div>
-    <div id="photo"></div>
+    <div id="photo" :style="photoBackground"></div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import ContactButtons from "@/components/ContactButtons.vue";
+import {useImage} from "#image/composables";
+
+const img = useImage()
+
+const photoBackground = computed(() => {
+  return {
+    backgroundImage: `url('${img('/images/IMG_0396.jpeg', { width: 700, format: 'webp' })}')`
+  }
+})
 </script>
 
 <style scoped lang="sass">
@@ -22,16 +31,23 @@ import ContactButtons from "@/components/ContactButtons.vue";
   align-items: center
   #photo
     width: 400px
-    height: 90%
+    height: 900px
+    max-height: 100vh
     position: relative
     top: -70px
-    border-radius: 0px 0px 100px 100px
-    background-image: url("/images/IMG_0396.jpeg")
+    border-radius: 0px 0px 200px 200px
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.4)
     background-size: cover
     background-position: center
+    @media only screen and (max-width: 800px)
+      opacity: 0.4
+      z-index: 80
+      position: abosolute
   #content
     margin: 0px 220px 100px 0px
     @media only screen and (max-width: 800px)
+      z-index: 90
+      position: absolute  
       text-align: center
       margin: 0px
     #title

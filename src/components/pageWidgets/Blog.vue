@@ -1,6 +1,6 @@
 <template>
   <div id="blog">
-    <aside id="sideBar">
+    <!-- <aside id="sideBar">
       <div id="sideCard">
         <Input style="margin-bottom: 10px" placeholder="Search..." v-model="fulltext"></Input>
         <br/>
@@ -8,7 +8,7 @@
           {{ category.value }}
         </checkbox>
       </div>
-    </aside>
+    </aside> -->
     <articles-grid :fulltext-search="fulltext" :selected-categories="selectedCategories"/>
   </div>
 </template>
@@ -32,7 +32,8 @@
 <style lang="sass" scoped>
 #blog
   min-height: 80vh
-  max-width: 90%
+  max-width: 1000px
+  width: 90%
   margin: 0 auto
   padding-top: 100px
   display: flex

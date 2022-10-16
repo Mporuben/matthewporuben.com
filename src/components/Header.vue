@@ -2,7 +2,7 @@
   <div id="top">
     <header id="top_bar">
       <router-link to='/'>
-        <h3 style="line-height: 0" href="/">Matthew Poruben</h3>
+        <h3 style="line-height: 0" href="/">MP</h3>
       </router-link>
       <div style="display: flex; flex-flow: row wrap;">
         <ContentNavigation v-slot="{ navigation }">
@@ -35,7 +35,7 @@
     #top_bar
       padding: 10px 20px
       margin-top: 10px
-      width: 90%
+      width: 95%
       box-shadow: 5px 5px 20px rgba(0,0,0,0.4)
       border-radius: 10px
       background: #394053

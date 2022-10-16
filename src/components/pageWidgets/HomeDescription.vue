@@ -47,7 +47,6 @@ const descriptionStyleImage = computed(() =>
       border-radius: 30px
       background-size: cover
       background-position: center
-      background: rgba(255,255,255, 0.4)
     #text
       padding: 30px
       font-size: 1.5em
