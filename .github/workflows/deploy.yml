@@ -14,3 +14,7 @@ jobs:
         run: npm run gen
       - name: Zip builded assets
         run: zip -r dist.zip ./dist
+      - name: Upload dist.zip
+        run: scp -P 26776 ./dist.zip uid1140413@shellserver-2.websupport.sk:matthewporuben.com
+      - name: 
+        run: scp -P 26776 ./dist.zip uid1140413@shellserver-2.websupport.sk:matthewporuben.com/web 
