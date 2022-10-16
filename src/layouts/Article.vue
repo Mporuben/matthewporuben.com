@@ -7,7 +7,7 @@
       <p style="margin-top: 20px">{{doc.description}}</p>
       <img :src="doc.cover" id="cover"/>
       <div id="content">
-        <ContentRenderer  :value="doc" />
+        <ContentRenderer :value="doc" />
       </div>
       <footer>
         <span><b>created:</b> {{doc.createdAt}}</span>
