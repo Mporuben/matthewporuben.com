@@ -8,11 +8,18 @@ export default defineNuxtConfig({
   
   css: ['~/assets/theme/main.sass'],
 
-  components: [{
-    path: '~/components/pageWidgets',
-    global: true
-  },
+  components: [
+    {
+      path: '~/components/pageWidgets',
+      global: true
+    }
   ],
+
+  nitro: {
+    prerender: {
+      routes: ['/sitemap.xml']
+    }
+  },
 
   // Nuxt dev-modules
   buildModules: [
