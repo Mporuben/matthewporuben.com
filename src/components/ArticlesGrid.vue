@@ -16,7 +16,7 @@
               <div>
                 <badge>{{article.category}}</badge>
               </div>
-              <span>{{article.createdAt}}22.12.2022</span>
+              <span>{{article.createdAt}}</span>
             </footer>
           </div>
         </div>
@@ -55,7 +55,7 @@ import {useImage} from "#image/composables";
     return `/blog/articles/${pathSplit[pathSplit.length-1]}`
   }
 
-  const getImage = (cover) => ({backgroundImage: `url('${img(cover, { width: '450px' })}')` })
+  const getImage = (cover) => ({backgroundImage: `url('${img(cover, { width: '550px', format: 'webp' })}')` })
 
   const formatDateInArticles = (articles) =>
     articles.map((article) => ({...article, createdAt: formatDate(article.createdAt)}) )
