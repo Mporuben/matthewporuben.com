@@ -45,7 +45,9 @@
   .story
     display: grid
     grid-template-columns: auto auto
+    column-gap: 10px
     margin-bottom: 20px
+    justify-content: flex-start
     #yearBorder
       padding: 5px
       border: solid 5px var(--primary)
@@ -59,7 +61,6 @@
         margin: 0px 6px
       #year
         height: 100%
-        width: 100%
         background: var(--primary)
         border-radius: 50%
         display: flex
@@ -67,8 +68,8 @@
         justify-content: center
         line-height: 0
     #card
-      background: #394053
       width: 100%
+      background: #394053
       border-radius: 20px
 
 </style>
