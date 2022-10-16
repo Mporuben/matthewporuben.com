@@ -2,7 +2,7 @@
   <div id="banner">
     <div id="content">
       <p id="title">Matthew Poruben</p>
-      <h2>FE team lead</h2>
+      <h2>FE dev</h2>
       <ContactButtons/>
     </div>
     <div id="photo" :style="photoBackground"></div>
