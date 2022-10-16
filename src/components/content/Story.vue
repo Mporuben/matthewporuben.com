@@ -44,20 +44,14 @@
   text-align: left
   .story
     display: grid
-    grid-template-columns: 150px auto
+    grid-template-columns: auto auto
     margin-bottom: 20px
-
     #yearBorder
       padding: 5px
       border: solid 5px var(--primary)
       border-radius: 50%
       width: 120px
       height: 120px
-      @media only screen and (max-width: 800px)
-        width: 100px
-        height:  100px
-        font-size: 0.8em
-        margin: 0px 10px
       @media only screen and (max-width: 800px)
         width: 80px
         height:  80px
@@ -76,6 +70,5 @@
       background: #394053
       width: 100%
       border-radius: 20px
-      @media only screen and (max-width: 800px)
-        width: 70%
+
 </style>

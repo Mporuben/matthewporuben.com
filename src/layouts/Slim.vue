@@ -6,8 +6,8 @@
 
 <style scoped lang="sass">
 #content
-  padding-top: 80px
-  width: 90%
-  padding-bottom: 50px
+  padding: 80px 15px 50px 15px
+  width: 100%
+  margin: 0 auto
   max-width: 800px
 </style>

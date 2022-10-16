@@ -5,8 +5,10 @@
       <Badge variant="primary">{{doc.category}}</Badge>
       <span>{{doc.created}}</span>
       <p style="margin-top: 20px">{{doc.description}}</p>
-      <img :src="doc.cover" style="width: 720px; border-radius: 20px"/>
-      <ContentRenderer :value="doc" />
+      <img :src="doc.cover" id="cover"/>
+      <div id="content">
+        <ContentRenderer  :value="doc" />
+      </div>
       <footer>
         <span><b>created:</b> {{doc.createdAt}}</span>
       </footer>
@@ -25,25 +27,26 @@ const getSlugFromPath = (path) => {
 </script>
 
 <style lang="sass">
-
-pre
-  background: #eae8e1 !important
-  filter: invert(1)
 #article
+  margin: 0 auto
   width: 90%
   max-width: 800px
-  margin: 0 auto
   padding-top: 80px
-  .cover
+  #cover
     width: 100%
+    max-width: 800px
     border-radius: 15px
     margin: 10px 0px
+  #content
+    max-width: 100%
   footer
     width: 100%
     border-top: 1px rgba(255,255,255,0.2) solid
     padding-top: 10px
     margin-bottom: 50px
   pre
+    background: #eae8e1 !important
+    filter: invert(1)
     border-radius: 5px
     code
       background: transparent

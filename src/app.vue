@@ -1,9 +1,9 @@
 <template>
+<div id="page">
   <Header/>
-  <div id="page">
-    <NuxtPage />
-  </div>
+  <NuxtPage/>
   <Footer />
+</div>
 </template>
 
 <script lang="ts" setup>
@@ -13,6 +13,5 @@ import Footer from "~/components/Footer.vue";
 
 <style scoped lang="sass">
 #page
-  display: flex
-  justify-content: center
+  width: 100%
 </style>
