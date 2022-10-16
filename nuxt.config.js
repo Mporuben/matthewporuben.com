@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   
   srcDir: './src',
   
-  css: ['~/assets/theme/main.sass'],
+  css: ['~/theme/main.sass'],
 
   components: [
     {
