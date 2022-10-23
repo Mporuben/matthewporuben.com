@@ -10,7 +10,8 @@
     "start": "nuxt start"
   },
   "dependencies": {
-    "nuxt": "3.0.0-rc.11"
+    "nuxt": "3.0.0-rc.11",
+    "vue-gtag": "^2.0.1"
   },
   "devDependencies": {
     "@nuxt/content": "^2.1.1",
