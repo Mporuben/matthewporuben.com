@@ -6,30 +6,33 @@
         <ContactButtons/>
         <p>© 2022 Matthew Poruben</p>
       </div>
+      <div>
+        <newsletter-subscribe/>
+      </div>
     </div>
   </footer>
 </template>
 
 <script lang="ts" setup>
 import ContactButtons from "@/components/ContactButtons.vue";
+import NewsletterSubscribe from "~/components/NewsletterSubscribe.vue";
 </script>
 
 <style lang="sass" scoped>
   footer
     width: 100%
+    background: var(--dark-lighter)
     display: flex
-    align-items: center
-    justify-content: center
+    align-items: flex-start
+    justify-content: space-around
     padding: 10px
     h4
       font-size: 1.5em
       line-height: 0
     #wrapper
-      max-width: 500px
       width: 90%
       display: flex
-      align-items: center
-      justify-content: center
-      text-align: center
+      align-items: flex-start
+      justify-content: space-around
       flex-wrap: wrap
 </style>

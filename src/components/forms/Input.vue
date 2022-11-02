@@ -1,5 +1,5 @@
 <template>
-  <input :placeholder="placeholder" @input="update" :value="modelValue" />
+  <input :placeholder="placeholder" @input="update" :value="modelValue"/>
 </template>
 
 <script lang="ts" setup>
@@ -12,6 +12,7 @@
 
   const update = (e) =>  {
     emit('update:modelValue', e.target.value)
+
   }
 
 </script>
@@ -20,8 +21,8 @@
   input
     border: none
     padding: 12px
-    background: var(--dark)
-    color: white
+    background:  white
+    color: var(--dark)
     border-radius: 5px
     width: 100%
 </style>

@@ -26,7 +26,6 @@
 </template>
 
 <script lang="ts" setup>
-import {formatDateDDMMYYYY as formatDate} from "@/utils/utils";
 import Badge from "~/components/preview/Badge.vue";
 import {useImage} from "#image/composables";
 
@@ -57,8 +56,6 @@ import {useImage} from "#image/composables";
 
   const getImage = (cover) => ({backgroundImage: `url('${cover}')` })
 
-  const formatDateInArticles = (articles) =>
-    articles.map((article) => ({...article, createdAt: formatDate(article.createdAt)}) )
 </script>
 
 <style lang="sass" scoped>

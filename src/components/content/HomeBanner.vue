@@ -2,7 +2,11 @@
   <div id="banner">
     <div id="content">
       <p id="title">Matthew Poruben</p>
-      <h2>FE dev</h2>
+      <h2>
+        I like building stuff...<br/>
+        from time to time I also write articles
+      </h2>
+      <NewsLetterSubscribe/>
       <ContactButtons/>
     </div>
     <div id="photo" :style="photoBackground"></div>
@@ -11,6 +15,7 @@
 
 <script lang="ts" setup>
 import ContactButtons from "@/components/ContactButtons.vue";
+import NewsLetterSubscribe from '@/components/NewsletterSubscribe.vue'
 import {useImage} from "#image/composables";
 
 const img = useImage()
@@ -60,6 +65,5 @@ const photoBackground = computed(() => {
     h2
       margin-top: 0px
       color: var(--primary)
-      @media only screen and (max-width: 800px)
-        font-size: 1.5em
+      font-size: 1.2em
 </style>

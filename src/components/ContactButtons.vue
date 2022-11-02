@@ -1,24 +1,16 @@
 <template>
-  <div id="socialButtons" class="mt-4">
+  <div id="socialButtons">
     <a href="https://github.com/Mporuben">
-      <Button class="social-button">
-        <img alt="github" class="socilIcon" src="@/assets/icons/logo-github.svg">
-      </Button>
+      <img alt="github" class="socilIcon" src="@/assets/icons/logo-github.svg">
     </a>
     <a href="https://www.instagram.com/matthewporuben/">
-      <Button class="social-button">
-        <img alt="instagram" class="socilIcon" src="@/assets/icons/logo-instagram.svg">
-      </Button>
+      <img alt="instagram" class="socilIcon" src="@/assets/icons/logo-instagram.svg">
     </a>
     <a href="https://www.linkedin.com/in/matthew-porueben/">
-      <Button class="social-button">
-        <img alt="linkedin" class="socilIcon" src="@/assets/icons/logo-linkedin.svg">
-      </Button>
+      <img alt="linkedin" class="socilIcon" src="@/assets/icons/logo-linkedin.svg">
     </a>
     <a href="mailto:matt@matthewporuben.com">
-      <Button class="social-button">
-        <img alt="email" class="socilIcon" src="@/assets/icons/mail.svg">
-      </Button>
+      <img alt="email" class="socilIcon" src="@/assets/icons/mail.svg">
     </a>
   </div>
 </template>
@@ -33,16 +25,10 @@ import Button from "@/components/forms/Button.vue";
   display: flex
   align-items: center
   flex-wrap: wrap
-  a
-    &:first-of-type
-      .social-button
-        margin: 0px 10px 0px 0px
-  .social-button
-    margin: 0px 10px
   .socilIcon
-    width: 45px
-    height: 45px
-    padding: 5px
+    margin-right: 10px
+    width: 40px
+    height: 40px
     @media only screen and (max-width: 800px)
       width: 40px
       height: 40px
