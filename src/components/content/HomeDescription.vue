@@ -3,9 +3,9 @@
     <div id="desc" class="shadow-lg">
       <div id="photo" :style="descriptionStyleImage"></div>
       <div id="text">
-        <p>
-          <slot></slot>
-        </p>
+          <div>
+            <slot></slot>
+          </div>
       </div>
     </div>
   </div>
