@@ -25,9 +25,12 @@ jobs:
            source: "./dist"
            target: "matthewporuben.com/"
       - name: Connect to WS server
-        run: echo ${{ secrets.WS_PASSWORD }} | ssh uid1140413@shellserver-2.websupport.sk -p 26776
-      - name:
+        run: echo ${{ secrets.WS_PASSWORD }} | ssh uid1140413@shellserver-2.websupport.sk -p 26776 -tt
+      - name: LS
         run: ls matthewporuben.com/dist
+      - name: Remove current version
+        run: rm -rf ./matthewporuben.com/dist
+
 
 
 
