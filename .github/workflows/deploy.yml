@@ -24,7 +24,7 @@ jobs:
            username: uid1140413
            password: ${{ secrets.WS_PASSWORD }}
            port: 26776
-           source: "./dist/*"
+           source: "./dist/"
            target: "matthewporuben.com/sub/staging"
 
 
