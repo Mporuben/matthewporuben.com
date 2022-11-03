@@ -8,12 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: webfactory/ssh-agent@v0.6.0
+        with:
+          ssh-private-key: ${{ secrets.SSH }}
       - name: CI
         run: npm ci
       - name: Generating static assets
         run: npm run gen
       - name: Upload build
         run: echo ${{ secrets.WS_PASSWORD }} | scp -P 26776 ./dist uid1140413@shellserver-2.websupport.sk:matthewporuben.com/sub/staging
-        with:
-          ssh-private-key: ${{ secrets.SSH }}
 
