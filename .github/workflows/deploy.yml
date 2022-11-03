@@ -6,18 +6,14 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    with:
-      ssh-private-key: ${{ secrets.SSH }}
     steps:
       - uses: actions/checkout@v2
       - name: CI
         run: npm ci
       - name: Generating static assets
         run: npm run gen
-#      - name: Print SSH key
-#        run: echo '${{ secrets.SSH }}' >> ./ssh-key
-#      - name: Add SSH
-#        run: echo ${{ secrets.SSH_PASTHPHRASE }} | ssh-add ./ssh-key -p ${{ secrets.SSH_PASTHPHRASE }}
       - name: Upload build
         run: echo ${{ secrets.WS_PASSWORD }} | scp -P 26776 ./dist uid1140413@shellserver-2.websupport.sk:matthewporuben.com/sub/staging
+        with:
+          ssh-private-key: ${{ secrets.SSH }}
 
