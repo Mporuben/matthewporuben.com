@@ -15,8 +15,6 @@ jobs:
         run: npm ci
       - name: Generating static assets
         run: npm run gen
-#      - name: Upload build
-#        run: echo ${{ secrets.WS_PASSWORD }} | scp -P 26776 ./dist uid1140413@shellserver-2.websupport.sk:matthewporuben.com/sub/staging
       - name: Upload build
         uses: appleboy/scp-action@master
         with:
@@ -24,7 +22,13 @@ jobs:
            username: uid1140413
            password: ${{ secrets.WS_PASSWORD }}
            port: 26776
-           source: "./dist/"
-           target: "matthewporuben.com/sub/staging"
+           source: "./dist"
+           target: "matthewporuben.com/"
+      - name: Connect to WS server
+        run: echo ${{ secrets.WS_PASSWORD }} | ssh uid1140413@shellserver-2.websupport.sk -p 26776
+      - name:
+        run: ls matthewporuben.com/dist
+
+
 
 
