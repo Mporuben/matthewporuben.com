@@ -13,7 +13,7 @@ jobs:
       - name: Generating static assets
         run: npm run gen
       - name: Print SSH key
-        run: echo ${{ secrets.SSH }} ./ssh-key
+        run: echo '${{ secrets.SSH }}' >> ./ssh-key
       - name: Add SSH
         run: echo ${{ secrets.SSH_PASTHPHRASE }} | ssh-add ./ssh-key
       - name: Upload build
