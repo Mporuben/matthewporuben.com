@@ -27,12 +27,13 @@ jobs:
       - name: Upload build
         uses: appleboy/scp-action@master
         with:
-           host: shellserver-2.websupport.sk
-           username: uid1140413
-           password: ${{ secrets.WS_PASSWORD }}
-           port: 26776
-           source: "./dist"
-           target: "/home/matthewporuben.com/repo"
+          host: shellserver-2.websupport.sk
+          username: uid1140413
+          password: ${{ secrets.WS_PASSWORD }}
+          port: 26776
+          rm: true
+          source: "./dist/*"
+          target: "/home/matthewporuben.com/repo"
 
       - name: Move deployed files to prod
         uses: appleboy/ssh-action@master
