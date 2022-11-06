@@ -24,6 +24,9 @@ jobs:
       - name: Generating static assets
         run: npm run gen
 
+      - name: Generating static assets
+        run: ls ./dist
+
       - name: Upload build
         uses: appleboy/scp-action@master
         with:
