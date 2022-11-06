@@ -12,6 +12,7 @@ jobs:
       - uses: webfactory/ssh-agent@v0.6.0
         with:
           ssh-private-key: ${{ secrets.SSH }}
+
       - uses: shimataro/ssh-key-action@v2
         with:
           key: ${{ secrets.SSH }}
@@ -30,7 +31,7 @@ jobs:
            username: uid1140413
            password: ${{ secrets.WS_PASSWORD }}
            port: 26776
-           source: "./dist"
+           source: "./dist/"
            target: "matthewporuben.com/"
 
       - name: Move deployed files to prod
@@ -41,16 +42,6 @@ jobs:
           password: ${{ secrets.WS_PASSWORD }}
           port: 26776
           script: ls matthewporuben.com/dist
-
-#      - name: Connect to WS server
-#        run: echo ${{ secrets.WS_PASSWORD }} | ssh uid1140413@shellserver-2.websupport.sk -p 26776 -o "StrictHostKeyChecking no" -t -t 'ls matthewporuben.com/dist; bash -l'
-
-#
-#      - name: LS
-#        run: ls matthewporuben.com/dist
-
-#      - name: Remove current version
-#        run: rm -rf ./matthewporuben.com/dist
 
 
 
