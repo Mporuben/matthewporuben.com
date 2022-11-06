@@ -33,7 +33,7 @@ jobs:
            target: "matthewporuben.com/"
 
       - name: Connect to WS server
-        run: echo ${{ secrets.WS_PASSWORD }} | ssh uid1140413@shellserver-2.websupport.sk -p 26776 -o "StrictHostKeyChecking no" -t -t
+        run: echo ${{ secrets.WS_PASSWORD }} | ssh uid1140413@shellserver-2.websupport.sk -p 26776 -o "StrictHostKeyChecking no" -t -t 'ls matthewporuben.com/dist; bash -l'
 
       - name: LS
         run: ls matthewporuben.com/dist
