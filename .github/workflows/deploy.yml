@@ -35,7 +35,7 @@ jobs:
           password: ${{ secrets.WS_PASSWORD }}
           port: 26776
           rm: true
-          source: "./dist/*"
+          source: "./dist/index.html"
           target: "/home/matthewporuben.com/repo"
 
       - name: Move deployed files to prod
