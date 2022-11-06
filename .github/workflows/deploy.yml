@@ -7,8 +7,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-
       - uses: actions/checkout@v2
+
       - uses: webfactory/ssh-agent@v0.6.0
         with:
           ssh-private-key: ${{ secrets.SSH }}
@@ -16,6 +16,7 @@ jobs:
         with:
           key: ${{ secrets.SSH }}
           known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
+
       - name: CI
         run: npm ci
 
@@ -32,11 +33,21 @@ jobs:
            source: "./dist"
            target: "matthewporuben.com/"
 
-      - name: Connect to WS server
-        run: echo ${{ secrets.WS_PASSWORD }} | ssh uid1140413@shellserver-2.websupport.sk -p 26776 -o "StrictHostKeyChecking no" -t -t 'ls matthewporuben.com/dist; bash -l'
+      - name: Move deployed files to prod
+          uses: appleboy/ssh-action@master
+          with:
+            host: shellserver-2.websupport.sk
+            username: uid1140413
+            password: ${{ secrets.WS_PASSWORD }}
+            port: 26776
+            script: ls matthewporuben.com/dist
 
-      - name: LS
-        run: ls matthewporuben.com/dist
+#      - name: Connect to WS server
+#        run: echo ${{ secrets.WS_PASSWORD }} | ssh uid1140413@shellserver-2.websupport.sk -p 26776 -o "StrictHostKeyChecking no" -t -t 'ls matthewporuben.com/dist; bash -l'
+
+#
+#      - name: LS
+#        run: ls matthewporuben.com/dist
 
 #      - name: Remove current version
 #        run: rm -rf ./matthewporuben.com/dist
