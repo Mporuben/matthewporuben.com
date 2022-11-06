@@ -41,7 +41,7 @@ jobs:
           username: uid1140413
           password: ${{ secrets.WS_PASSWORD }}
           port: 26776
-          script: ls matthewporuben.com/dist
+          script: ls matthewporuben.com/repo/dist
 
 
 
