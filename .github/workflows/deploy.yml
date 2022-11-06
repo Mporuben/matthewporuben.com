@@ -34,13 +34,13 @@ jobs:
            target: "matthewporuben.com/"
 
       - name: Move deployed files to prod
-          uses: appleboy/ssh-action@master
-          with:
-            host: shellserver-2.websupport.sk
-            username: uid1140413
-            password: ${{ secrets.WS_PASSWORD }}
-            port: 26776
-            script: ls matthewporuben.com/dist
+        uses: appleboy/ssh-action@master
+        with:
+          host: shellserver-2.websupport.sk
+          username: uid1140413
+          password: ${{ secrets.WS_PASSWORD }}
+          port: 26776
+          script: ls matthewporuben.com/dist
 
 #      - name: Connect to WS server
 #        run: echo ${{ secrets.WS_PASSWORD }} | ssh uid1140413@shellserver-2.websupport.sk -p 26776 -o "StrictHostKeyChecking no" -t -t 'ls matthewporuben.com/dist; bash -l'
