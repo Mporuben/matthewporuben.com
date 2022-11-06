@@ -31,8 +31,8 @@ jobs:
            username: uid1140413
            password: ${{ secrets.WS_PASSWORD }}
            port: 26776
-           source: "./dist/"
-           target: "matthewporuben.com/"
+           source: "./dist"
+           target: "/home/matthewporuben.com/repo"
 
       - name: Move deployed files to prod
         uses: appleboy/ssh-action@master
