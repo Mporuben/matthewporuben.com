@@ -33,7 +33,7 @@ jobs:
            target: "matthewporuben.com/"
 
       - name: Connect to WS server
-        run: echo ${{ secrets.WS_PASSWORD }} | ssh uid1140413@shellserver-2.websupport.sk -p 26776
+        run: echo ${{ secrets.WS_PASSWORD }} | ssh uid1140413@shellserver-2.websupport.sk -p 26776 -t -t
 
       - name: LS
         run: ls matthewporuben.com/dist
