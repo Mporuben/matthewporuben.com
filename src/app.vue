@@ -1,9 +1,9 @@
 <template>
-<div id="page">
-  <Header/>
-  <NuxtPage/>
-  <Footer />
-</div>
+  <div id="page">
+    <Header/>
+    <NuxtPage/>
+    <Footer />
+  </div>
 </template>
 
 <script lang="ts" setup>

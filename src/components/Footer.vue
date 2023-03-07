@@ -3,7 +3,7 @@
     <div id="wrapper">
       <div>
         <h4>Get in touch</h4>
-        <ContactButtons/>
+        <contact-buttons/>
         <p>© 2022 Matthew Poruben</p>
       </div>
       <div>
