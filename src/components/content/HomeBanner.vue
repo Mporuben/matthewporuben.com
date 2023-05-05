@@ -14,10 +14,7 @@
 
 <script lang="ts" setup>
 import ContactButtons from "@/components/ContactButtons.vue";
-import NewsLetterSubscribe from '@/components/NewsletterSubscribe.vue'
-import {useImage} from "#image/composables";
 
-const img = useImage()
 
 const photoBackground = computed(() => {
   return {

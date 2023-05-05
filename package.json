@@ -15,7 +15,6 @@
   },
   "devDependencies": {
     "@nuxt/content": "^2.6.0",
-    "@nuxt/image-edge": "^1.0.0-27719579.87dcdf2",
     "@nuxt/typescript-build": "^3.0.1",
     "@nuxtjs/google-analytics": "^2.4.0",
     "sass": "^1.62.1",

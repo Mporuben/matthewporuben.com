@@ -1,14 +1,5 @@
 <template>
   <div id="blog">
-    <!-- <aside id="sideBar">
-      <div id="sideCard">
-        <Input style="margin-bottom: 10px" placeholder="Search..." v-model="fulltext"></Input>
-        <br/>
-        <checkbox v-for="category of categories" :key="`categories-${category.value}`" v-model="category.enabled">
-          {{ category.value }}
-        </checkbox>
-      </div>
-    </aside> -->
     <articles-grid :fulltext-search="fulltext" :selected-categories="selectedCategories"/>
   </div>
 </template>
@@ -16,8 +7,6 @@
 <script lang="ts" setup>
   import {computed, ref} from 'vue'
   import ArticlesGrid from "@/components/ArticlesGrid.vue";
-  import Input from '@/components/forms/Input.vue'
-  import Checkbox from "@/components/forms/Checkbox.vue";
 
   const {data: categories} = await useAsyncData(async() => {
     const {categories} = await queryContent('blog', '_categories').findOne()

@@ -2,7 +2,7 @@
   <footer>
     <div id="wrapper">
       <div>
-        <h4>Get in touch</h4>
+        <h2>Get in touch</h2>
         <contact-buttons/>
         <p>© 2022 Matthew Poruben</p>
       </div>
@@ -25,7 +25,7 @@ import NewsletterSubscribe from "~/components/NewsletterSubscribe.vue";
     text-align: center
     justify-content: space-around
     padding: 10px
-    h4
+    h2
       font-size: 1.5em
       line-height: 0
     #wrapper

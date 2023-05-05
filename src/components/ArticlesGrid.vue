@@ -27,7 +27,6 @@
 
 <script lang="ts" setup>
 import Badge from "~/components/preview/Badge.vue";
-import {useImage} from "#image/composables";
 
   const props = defineProps({
     fulltextSearch: {
@@ -46,8 +45,6 @@ import {useImage} from "#image/composables";
   })
 
   watch(() =>props.fulltextSearch, ()=> console.log(props.fulltextSearch))
-
-  const img = useImage()
 
   const getLink = (filePath: string) => {
     const pathSplit = filePath.split('/')

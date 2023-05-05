@@ -13,9 +13,6 @@
 
 <script lang="ts" setup>
 import {computed} from 'vue'
-import {useImage} from "#image/composables";
-
-const img = useImage()
 
 const descriptionStyleImage = computed(() =>
   ({
