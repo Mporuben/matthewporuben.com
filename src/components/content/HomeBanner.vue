@@ -6,7 +6,6 @@
         I like building stuff...<br/>
         from time to time I also write articles
       </h2>
-      <NewsLetterSubscribe/>
       <ContactButtons/>
     </div>
     <div id="photo" :style="photoBackground"></div>
@@ -22,7 +21,7 @@ const img = useImage()
 
 const photoBackground = computed(() => {
   return {
-    backgroundImage: `url('/images/IMG_0396.webp')`
+    backgroundImage: `url('/images/IMG_0396.jpeg')`
   }
 })
 </script>
@@ -46,7 +45,7 @@ const photoBackground = computed(() => {
     background-size: cover
     background-position: center
     @media only screen and (max-width: 800px)
-      opacity: 0.4
+      opacity: 0.2
       z-index: 80
       position: abosolute
   #content

@@ -1,12 +1,9 @@
-import {defineNuxtConfig} from "nuxt";
-
 export default defineNuxtConfig({
-  // General 
-  target: 'static',
-  
-  srcDir: './src',
+
   
   css: ['~/theme/main.sass'],
+
+  srcDir: './src',
 
   head: {
     htmlAttrs: {
@@ -44,7 +41,6 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/image-edge',
   ],
-
 
   // Nuxt Content Config
   content: {

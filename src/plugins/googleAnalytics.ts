@@ -7,5 +7,4 @@ export default defineNuxtPlugin((nuxtApp) => {
       config: {id},
     }, nuxtApp.$router)
   }
-
 })

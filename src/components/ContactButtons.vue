@@ -1,16 +1,16 @@
 <template>
   <div id="socialButtons">
     <a href="https://github.com/Mporuben">
-      <img alt="github" class="socilIcon" src="@/assets/icons/logo-github.svg">
+      <img alt="github" class="socilIcon" src="/icons/logo-github.svg">
     </a>
     <a href="https://www.instagram.com/matthewporuben/">
-      <img alt="instagram" class="socilIcon" src="@/assets/icons/logo-instagram.svg">
+      <img alt="instagram" class="socilIcon" src="/icons/logo-instagram.svg">
     </a>
     <a href="https://www.linkedin.com/in/matthew-porueben/">
-      <img alt="linkedin" class="socilIcon" src="@/assets/icons/logo-linkedin.svg">
+      <img alt="linkedin" class="socilIcon" src="/icons/logo-linkedin.svg">
     </a>
     <a href="mailto:matt@matthewporuben.com">
-      <img alt="email" class="socilIcon" src="@/assets/icons/mail.svg">
+      <img alt="email" class="socilIcon" src="/icons/mail.svg">
     </a>
   </div>
 </template>

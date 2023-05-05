@@ -6,9 +6,7 @@
         <contact-buttons/>
         <p>© 2022 Matthew Poruben</p>
       </div>
-      <div>
-        <newsletter-subscribe/>
-      </div>
+
     </div>
   </footer>
 </template>
@@ -24,6 +22,7 @@ import NewsletterSubscribe from "~/components/NewsletterSubscribe.vue";
     background: var(--dark-lighter)
     display: flex
     align-items: flex-start
+    text-align: center
     justify-content: space-around
     padding: 10px
     h4

@@ -31,11 +31,8 @@ import Badge from "~/components/preview/Badge.vue";
     margin-bottom: 20px
     margin-left: 5px
   #all-articles
-    background: var(--navy-light)
     display: flex
-    border-radius: 5px
+    justify-content: center
     padding: 5px
     color: white
-    justify-content: center
-
 </style>
