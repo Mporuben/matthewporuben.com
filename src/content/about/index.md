@@ -1,7 +1,7 @@
 ---
 navigation:
 title: 'About'
-layout: 'slim'
+maxWidth: 900px
 ---
 
 # About me

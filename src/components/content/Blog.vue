@@ -24,8 +24,8 @@
   max-width: 1000px
   width: 90%
   margin: 0 auto
-  padding-top: 100px
   display: flex
+  margin-top: 10px
   @media only screen and (max-width: 900px)
     flex-wrap: wrap
   #sideBar

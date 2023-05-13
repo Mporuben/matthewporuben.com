@@ -27,6 +27,7 @@ const photoBackground = computed(() => {
 #banner
   width: 100%
   height: 100vh
+  margin-top: -80px
   display: flex
   justify-content: space-around
   align-items: center

@@ -1,6 +1,5 @@
 export default defineNuxtConfig({
 
-
   css: ['~/theme/main.sass'],
 
   srcDir: './src',
