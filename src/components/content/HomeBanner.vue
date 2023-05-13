@@ -4,7 +4,6 @@
       <p id="title">Matthew Poruben</p>
       <h2>
         I like building stuff...<br/>
-        from time to time I also write articles
       </h2>
       <ContactButtons/>
     </div>
