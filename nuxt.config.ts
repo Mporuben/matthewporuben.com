@@ -24,6 +24,10 @@ export default defineNuxtConfig({
     {
       path: '~/components/pageWidgets',
       global: true
+    },
+    {
+      path: '~/components/reusable',
+      global: true
     }
   ],
 

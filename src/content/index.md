@@ -18,11 +18,14 @@ of code in your alarm app or a application for company size of Google.
 ::
 
 
+<br/>
+
+# Projects
 :projects
 
+<br/>
 
 # Blog
-
 :articles-grid{limit=1}
 
 <router-link to="/blog">All Articles > </router-link>
