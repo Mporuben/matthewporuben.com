@@ -7,10 +7,6 @@ title: 'Matthew Poruben'
 ::
 
 
-
-
-
-
 ::home-description
 Hi my name is Matt and I'm a software engineer from Slovakia. I love using my creativity
 for creating software and developing new technological / art experience. My dream is that
