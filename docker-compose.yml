@@ -1,0 +1,15 @@
+version: "3.5"
+
+services:
+  cli:
+    container_name: matthewporuben-cli
+    build: .
+    volumes:
+      - ./:/app
+    command: npm run dev
+    ports:
+      - "3000:3000"
+    expose:
+      - "3000"
+volumes:
+  npm-cache:
