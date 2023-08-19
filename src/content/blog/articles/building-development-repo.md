@@ -4,7 +4,7 @@ description: 'Docker-based development repo helps to reduce setup time for our a
 It also allows us to manage multiple services from one place and emulate the production environment.   
 This article serves as a step-by-step guide for creating a development repo.'
 cover: /images/blog/building-development-repo/cover.png
-preview: /images/blog/building-development-repo/preview.png
+preview: /images/blog/building-development-repo/reusable.png
 category: Coding
 layout: article
 createdAt: 28.2.2022

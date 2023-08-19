@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
   import {computed, ref} from 'vue'
-  import ArticlesGrid from "@/components/ArticlesGrid.vue";
+  import ArticlesGrid from "~/components/reusable/ArticlesGrid.vue";
 
   const {data: categories} = await useAsyncData(async() => {
     const {categories} = await queryContent('blog', '_categories').findOne()
@@ -15,7 +15,7 @@
   const fulltext = ref('')
 
   const selectedCategories = computed(() =>
-    categories.value.reduce((acc, el) => el.enabled ? acc.concat([el.value]) : acc, []))
+    categories.value.reduce((acc: any[], el) => el.enabled ? acc.concat([el.value]) : acc, []))
 </script>
 
 <style lang="sass" scoped>

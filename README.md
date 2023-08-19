@@ -12,6 +12,10 @@ $ npm i
 $ npm run dev
 
 
+# deploy
+rsync -avH dist/ -e ssh root@matthewporuben.com:/path/to/file
+
+
 # generate static project
 $ npm run gen
 

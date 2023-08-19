@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts" setup>
-import ContactButtons from "@/components/ContactButtons.vue";
+import ContactButtons from "~/components/reusable/ContactButtons.vue";
 </script>
 
 <style lang="sass" scoped>

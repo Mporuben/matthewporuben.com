@@ -1,6 +1,7 @@
 ---
 navigation: false
 title: 'Matthew Poruben'
+maxWidth: 900px
 ---
 
 ::home-banner
@@ -19,4 +20,9 @@ of code in your alarm app or a application for company size of Google.
 
 :projects
 
-:home-articles
+
+# Blog
+
+:articles-grid{limit=1}
+
+<router-link to="/blog">All Articles > </router-link>

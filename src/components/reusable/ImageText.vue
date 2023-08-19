@@ -9,7 +9,6 @@
 
 
 <script lang="ts" setup>
-
 const props = defineProps({
   image: {
     type: String,

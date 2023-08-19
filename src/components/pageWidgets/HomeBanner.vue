@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts" setup>
-import ContactButtons from "@/components/ContactButtons.vue";
+import ContactButtons from "~/components/reusable/ContactButtons.vue";
 
 
 const photoBackground = computed(() => {

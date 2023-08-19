@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts" setup>
-import Badge from "~/components/preview/Badge.vue";
+import Badge from "~/components/reusable/Badge.vue";
 
 const getSlugFromPath = (path: string) => {
   const pathSplit = path.split('/')

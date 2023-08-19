@@ -7,7 +7,6 @@
     <div id="card_grid">
       <div class="card">
         <div class="image"></div>
-
         <div class="description">
           <h3>WSB Harpoon</h3>
           <p>Open source tool for parsing financial statements</p>
