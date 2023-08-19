@@ -32,7 +32,7 @@
   //@ts-ignore
   const story = computed(() => JSON.parse(props.story))
 
-  const storyOrientation = (i) =>
+  const storyOrientation = (i: number) =>
     ({'text-align': 'left'})
 
 </script>

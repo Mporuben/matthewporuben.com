@@ -4,16 +4,14 @@
       <div>
         <h2>Get in touch</h2>
         <contact-buttons/>
-        <p>© 2022 Matthew Poruben</p>
+        <p>© 2023 Matthew Poruben</p>
       </div>
-
     </div>
   </footer>
 </template>
 
 <script lang="ts" setup>
 import ContactButtons from "@/components/ContactButtons.vue";
-import NewsletterSubscribe from "~/components/NewsletterSubscribe.vue";
 </script>
 
 <style lang="sass" scoped>

@@ -51,7 +51,7 @@ import Badge from "~/components/preview/Badge.vue";
     return `/blog/articles/${pathSplit[pathSplit.length-1]}`
   }
 
-  const getImage = (cover) => ({backgroundImage: `url('${cover}')` })
+  const getImage = (cover: string) => ({backgroundImage: `url('${cover}')` })
 
 </script>
 

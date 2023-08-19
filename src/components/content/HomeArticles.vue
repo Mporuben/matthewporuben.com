@@ -12,7 +12,6 @@
 
 <script lang="ts" setup>
 import ArticlesGrid from "~/components/ArticlesGrid.vue";
-import Badge from "~/components/preview/Badge.vue";
 </script>
 
 <style scoped lang="sass">

@@ -19,7 +19,7 @@
 <script lang="ts" setup>
 import Badge from "~/components/preview/Badge.vue";
 
-const getSlugFromPath = (path) => {
+const getSlugFromPath = (path: string) => {
   const pathSplit = path.split('/')
   return `/blog/articles/${pathSplit[pathSplit.length-1]}`
 }
