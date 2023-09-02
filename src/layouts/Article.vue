@@ -7,7 +7,7 @@
       <p style="margin-top: 20px">{{doc.description}}</p>
       <img :src="doc.cover" id="cover"/>
       <div id="content">
-        <ContentRenderer :value="doc" />
+        <ContentRenderer :value="llll(doc)" />
       </div>
       <footer>
         <span><b>created:</b> {{doc.createdAt}}</span>
@@ -20,8 +20,15 @@
 import Badge from "~/components/reusable/Badge.vue";
 
 const getSlugFromPath = (path: string) => {
-  const pathSplit = path.split('/')
-  return `/blog/articles/${pathSplit[pathSplit.length-1]}`
+  // const pathSplit = path.split('/')
+  // const res = `/blog/articles/${pathSplit[pathSplit.length-1]}`
+  // console.log(path, res)
+  return path
+}
+
+const llll = (t) => {
+  // console.log(t)
+  return t
 }
 
 </script>
