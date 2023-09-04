@@ -22,7 +22,7 @@ export default defineNuxtConfig({
 
   components: [
     {
-      path: '~/components/pageWidgets',
+      path: '~/components/pages',
       global: true
     },
     {

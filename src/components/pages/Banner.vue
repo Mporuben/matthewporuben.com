@@ -14,7 +14,6 @@
 <script lang="ts" setup>
 import ContactButtons from "~/components/reusable/ContactButtons.vue";
 
-
 const photoBackground = computed(() => {
   return {
     backgroundImage: `url('/images/IMG_0396.jpeg')`
