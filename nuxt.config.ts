@@ -45,8 +45,6 @@ export default defineNuxtConfig({
   // Nuxt Content Config
   content: {
     documentDriven: true,
-    // @ts-ignore
-    dir: 'content'
   },
 
 })
