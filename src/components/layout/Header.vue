@@ -2,14 +2,14 @@
   <div id="top">
     <header id="top_bar">
       <router-link to='/'>
-        <strong><h3 style="line-height: 0" href="/">Matthew Poruben</h3></strong>
+        <h3 style="line-height: 0" href="/">Matthew Poruben</h3>
       </router-link>
       <div style="display: flex; flex-flow: row wrap;">
         <ContentNavigation v-slot="{ navigation }">
           <router-link
-            :to="link._path"
             v-for="link of navigation"
             :key="link._path"
+            :to="link._path"
             class="link"
             :style="{order: navigation.order}"
           >
