@@ -1,11 +1,11 @@
 ---
 navigation:
 title: 'About'
-maxWidth: 900px
+maxWidth: 700px
 ---
 
  
-::imageText{image='/images/me.jpeg'}  
+::imageText{image='/images/me.jpeg' image-alt='photo of me'}  
 
 
 # About me

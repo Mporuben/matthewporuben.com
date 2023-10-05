@@ -42,7 +42,7 @@
     #top_bar
       padding: 10px 20px
       width: 95%
-      max-width: 1200px
+      max-width: 1000px
       margin-top: 10px
       box-shadow: 5px 5px 20px rgba(0,0,0,0.4)
       border-radius: 10px
@@ -54,6 +54,7 @@
         display: flex
         flex-flow: row wrap
       strong
+        color: white
         font-size: 1.2em
         line-height: 0
       .link
@@ -63,12 +64,13 @@
         padding: 10px
   footer
     width: 100%
-    background: var(--dark-lighter)
     text-align: center
-    padding: 10px
     display: flex
     flex-direction: column
+    padding: 50px 0px
     align-items: center
     strong
+      margin-bottom: 20px
       font-size: 1.5em
+
 </style>

@@ -1,27 +1,33 @@
 ---
 navigation: false
 title: 'Matthew Poruben'
-maxWidth: 900px
+maxWidth: 1000px
 ---
 
 ::banner
+
+I'm a software engineer and a team leader. I love building teams and
+technologies that deliver delightful experiences to users.
+
+[Learn more about me](/about)
+
+<ContactButtons/>
 ::
 
 
-::description
-Hi my name is Matt and I'm a software engineer from Slovakia. I love using my creativity
-for creating software and developing new technological / art experience. My dream is that
-one day thousands of people will find joy in my creations, regardless if its just a line
-of code in your alarm app or a application for company size of Google.
-
-[Learn more about me](about)
-::
-
-
-<br/>
 
 # Projects
-:projects
+
+:projects{projects='[
+{
+"title": "WSB Harpoon",
+"description": "Extendable open source tool for financial analysis",
+"image": "2022 - now"
+}
+]'}
+
+
+
 
 <br/>
 

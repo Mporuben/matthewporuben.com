@@ -3,7 +3,7 @@
     <div class="text">
       <slot></slot>
     </div>
-    <img :src="props.image" style='width: 300px;border-radius: 20px' />
+    <img :src="props.image" :alt="imageAlt" style='width: 300px;border-radius: 20px' />
   </div>
 </template>
 
@@ -11,6 +11,10 @@
 <script lang="ts" setup>
 const props = defineProps({
   image: {
+    type: String,
+    required: true
+  },
+  imageAlt: {
     type: String,
     required: true
   }

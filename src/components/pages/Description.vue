@@ -1,6 +1,5 @@
 <template>
   <div id="desc" class="shadow-lg">
-    <div id="photo" :style="descriptionStyleImage"></div>
     <div id="text">
       <div><slot></slot></div>
     </div>
@@ -22,22 +21,14 @@ const descriptionStyleImage = computed(() =>
   width: 100%
   background: #394053
   max-width: 1200px
-  height: 400px
   border-radius: 30px
   display: grid
   overflow: hidden
-  grid-template-columns: 400px auto
-  @media only screen and (max-width: 900px)
-    grid-template-columns: auto
-    grid-template-rows: 500px auto
-    height: auto
-  #photo
-    border-radius: 30px
-    background-size: cover
-    background-position: center
   #text
+
+    width: 100%
     padding: 30px
-    font-size: 1.1em
+    font-size: 1.3em
     display: flex
     align-items: center
     justify-content: center

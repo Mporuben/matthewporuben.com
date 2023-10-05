@@ -62,6 +62,8 @@
       #year
         height: 100%
         background: var(--primary)
+        color: var(--dark)
+        font-weight: bold
         border-radius: 50%
         display: flex
         align-items: center

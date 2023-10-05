@@ -11,7 +11,7 @@ createdAt: 9.1.2022
 ## Intro
 This article is trying to explain the philosophy behind the development repo.
 I've also written a practical step-by-step guide on how to implement a development repo.
-You can find it [here](/blog/articles/building-development-repo).
+[Building development repo article](/blog/articles/building-development-repo).
 
 ## Goal
 Providing an easy development experience where a developer has to take care only of his application and doesn't have to care about the rest of the infrastructure.
@@ -77,7 +77,7 @@ all the code to make infrastructure run. You will pull code only for this applic
 work on. So If I'm working on the FE app I will pull docker images for the whole infrastructure and then pull actual code for my
 FE application and mount FE code from my host machine into a docker container.
 
-I've created a functional showcase. You can find it [here](https://github.com/Mporuben/dev-repo).
+I've created a functional showcase. You can take a look on [github example repository](https://github.com/Mporuben/dev-repo).
 In this approach, we can run the whole infrastructure with very little afford
 and actually clone only code that we are working on.
 
@@ -114,7 +114,7 @@ Development repo is a convenient way of managing & configuring our infrastructur
 It is a very flexible system that reduces the cost of setups and provides a consistent development experience across our team.
 We can consider it as an alternative to a Monorepo. Before we pick one over the other we should carefully think about
 our use case and our tech stack. I hope this article enjoyed this article and that it brought you some value.
-If you want to try to build your Dev repo you can try [this](/blog/articles/building-development-repo) step-by-step guide 
+If you want to try to build your Dev repo you can read [building development repo](/blog/articles/building-development-repo) step-by-step guide 
 
 
 

@@ -5,9 +5,9 @@
       <Badge variant="primary">{{doc.category}}</Badge>
       <span>{{doc.created}}</span>
       <p style="margin-top: 20px">{{doc.description}}</p>
-      <img :src="doc.cover" id="cover"/>
+      <img :src="doc.cover" id="cover" alt="article title image"/>
       <div id="content">
-        <ContentRenderer :value="llll(doc)" />
+        <ContentRenderer :value="doc" />
       </div>
       <footer>
         <span><b>created:</b> {{doc.createdAt}}</span>
@@ -26,18 +26,13 @@ const getSlugFromPath = (path: string) => {
   return path
 }
 
-const llll = (t) => {
-  // console.log(t)
-  return t
-}
-
 </script>
 
 <style lang="sass">
 #article
   margin: 0 auto
   width: 90%
-  max-width: 800px
+  max-width: 700px
   padding-top: 80px
   #cover
     width: 100%
@@ -60,6 +55,6 @@ const llll = (t) => {
       color: initial
   code
     background: rgba(235, 152, 0, 0.1)
-    color: rgb(235, 152, 0)
+    color: var(--primary)
     padding: 2px
 </style>
