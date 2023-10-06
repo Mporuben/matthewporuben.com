@@ -1,6 +1,6 @@
 <template>
   <div id="article">
-    <ContentDoc :path="getSlugFromPath($route.path)" v-slot="{doc}">
+    <ContentDoc :path="$route.path" v-slot="{doc}">
       <h1>{{doc.title}}</h1>
       <Badge variant="primary">{{doc.category}}</Badge>
       <span>{{doc.created}}</span>
@@ -18,13 +18,6 @@
 
 <script lang="ts" setup>
 import Badge from "~/components/reusable/Badge.vue";
-
-const getSlugFromPath = (path: string) => {
-  // const pathSplit = path.split('/')
-  // const res = `/blog/articles/${pathSplit[pathSplit.length-1]}`
-  // console.log(path, res)
-  return path
-}
 
 </script>
 

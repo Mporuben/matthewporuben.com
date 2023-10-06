@@ -18,15 +18,15 @@ technologies that deliver delightful experiences to users.
 
 # Projects
 
-:projects{projects='[
-{
-"title": "WSB Harpoon",
-"description": "Extendable open source tool for financial analysis",
-"image": "2022 - now"
-}
-]'}
+::card{style="width: 400px"}
 
+<img src="/images/projects/wsb-harpoon.jpg" style="width: 80px; border-radius: 10px"/>
 
+## WSB Harpoon
+Extendable open source tool for financial analysis
+
+[Lern more](https://github.com/Mporuben/wsb-harpoon)
+::
 
 
 <br/>
