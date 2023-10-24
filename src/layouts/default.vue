@@ -19,7 +19,7 @@ const maxWidth = computed(() => data?._rawValue?.maxWidth || '100%' )
 
 <style scoped lang="sass">
 #content
-  padding: 80px 15px 50px 15px
+  padding: 80px 30px 50px 30px
   margin: 0 auto
   display: flex
   justify-content: center

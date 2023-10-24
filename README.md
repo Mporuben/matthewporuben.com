@@ -4,16 +4,18 @@
 
 ## Build Setup
 
-```bash
-# install dependencies
-$ npm i
+1. install dependencies
+    ```bash
+    npm i
+    ```
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+2. serve with hot reload at localhost:3000
+    ```bash
+    npm run dev
+    ```
 
-# generate static project
-$ npm run gen
+3. generate static project
+    ```bash
+    npm run gen
+    ```
 
-# deploy
-rsync -avH dist/ -e ssh root@matthewporuben.com:/path/to/file
-```

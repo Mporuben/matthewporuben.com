@@ -15,7 +15,6 @@ technologies that deliver delightful experiences to users.
 ::
 
 
-
 # Projects
 
 ::card{style="width: 400px"}
@@ -34,4 +33,4 @@ Extendable open source tool for financial analysis
 # Blog
 :articles{limit=1}
 
-<router-link to="/blog">All Articles > </router-link>
+[All Articles >](/blog)

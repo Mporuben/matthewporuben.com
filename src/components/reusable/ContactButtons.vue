@@ -20,11 +20,13 @@
   display: flex
   align-items: center
   flex-wrap: wrap
+  @media only screen and (max-width: 900px)
+    justify-content: center
   .socilIcon
     margin-right: 10px
     width: 40px
     height: 40px
-    @media only screen and (max-width: 800px)
+    @media only screen and (max-width: 900px)
       width: 40px
       height: 40px
 
