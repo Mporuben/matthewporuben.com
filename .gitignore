@@ -87,5 +87,5 @@ sw.*
 # Vim swap files
 *.swp
 
-.output
+app/.output
 dist.zip

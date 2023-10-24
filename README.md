@@ -6,16 +6,16 @@
 
 1. install dependencies
     ```bash
-    npm i
+    docker compose run cli npm i 
     ```
 
 2. serve with hot reload at localhost:3000
     ```bash
-    npm run dev
+    docker compose up dev -d
     ```
 
 3. generate static project
     ```bash
-    npm run gen
+    docker compose run cli npm run gen
     ```
 

@@ -5,8 +5,17 @@ services:
     container_name: matthewporuben-cli
     build: .
     volumes:
-      - ./:/app
+      - ./app:/app
+      - ./public:/app/src/public
+      - ./content:/app/src/content
+  dev:
+    container_name: matthewporuben-dev
+    build: .
+    volumes:
+      - ./app:/app
+      - ./public:/app/src/public
+      - ./content:/app/src/content
     ports:
-      - "3000:3000"
-    expose:
-      - "3000"
+      - 3000:3000
+    command: npm run dev
+
