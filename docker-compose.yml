@@ -3,19 +3,19 @@ version: "3.5"
 services:
   cli:
     container_name: matthewporuben-cli
-    build: .
+    build: ./app/docker
     volumes:
       - ./app:/app
       - ./public:/app/src/public
       - ./content:/app/src/content
   dev:
     container_name: matthewporuben-dev
-    build: .
+    build: ./app/docker
+    command: rm -rf /tmp/nitro/worker-* && npm run dev
+    ports:
+      - 3000:3000
     volumes:
       - ./app:/app
       - ./public:/app/src/public
       - ./content:/app/src/content
-    ports:
-      - 3000:3000
-    command: npm run dev
 
