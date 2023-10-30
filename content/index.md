@@ -24,7 +24,7 @@ technologies that deliver delightful experiences to users.
 ## WSB Harpoon
 Extendable open source tool for financial analysis
 
-[Lern more](https://github.com/Mporuben/wsb-harpoon)
+[Lern more](https://mporuben.github.io/wsb-harpoon)
 ::
 
 
