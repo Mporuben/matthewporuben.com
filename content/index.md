@@ -19,7 +19,7 @@ technologies that deliver delightful experiences to users.
 
 ::card{style="width: 400px"}
 
-<img src="/images/projects/wsb-harpoon.jpg" style="width: 80px; border-radius: 10px"/>
+<img src="/images/projects/wsb-harpoon.jpg" width="80px" height="80px" style="border-radius: 10px"/>
 
 ## WSB Harpoon
 Extendable open source tool for financial analysis
