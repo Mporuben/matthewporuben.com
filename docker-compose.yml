@@ -11,7 +11,7 @@ services:
   dev:
     container_name: matthewporuben-dev
     build: ./app/docker
-    command: rm -rf /tmp/nitro/worker-* && npm run dev
+    command: npm run dev
     ports:
       - 3000:3000
     volumes:
