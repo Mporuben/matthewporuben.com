@@ -2,20 +2,24 @@ version: "3.5"
 
 services:
   cli:
+    image: node:18-alpine
     container_name: matthewporuben-cli
-    build: ./app/docker
+    working_dir: /app
     volumes:
       - ./app:/app
-      - ./public:/app/src/public
-      - ./content:/app/src/content
+      - ./public:/app/public
+      - ./content:/app/content
   dev:
+    image: node:18-alpine
     container_name: matthewporuben-dev
-    build: ./app/docker
-    command: npm run dev
+    working_dir: /app
+    command: npm run dev:docker
     ports:
       - 3000:3000
+    expose:
+      - 3000
     volumes:
       - ./app:/app
-      - ./public:/app/src/public
-      - ./content:/app/src/content
+      - ./public:/app/public
+      - ./content:/app/content
 
