@@ -1,9 +1,7 @@
 export default defineNuxtConfig({
-
-  css: ['~/theme/main.sass'],
-
-  srcDir: './src',
-
+  experimental: {
+    componentIslands: true // false or 'local+remote'
+  },
   app: {
     head: {
       htmlAttrs: {
@@ -20,6 +18,8 @@ export default defineNuxtConfig({
     },
   },
 
+  css: ['~/theme/main.sass'],
+
   components: [
     {
       path: '~/components/pages',
@@ -31,20 +31,20 @@ export default defineNuxtConfig({
     }
   ],
 
-  nitro: {
-    prerender: {
-      routes: ['/sitemap.xml']
-    }
-  },
-
   // Nuxt modules
   modules: [
     '@nuxt/content',
+    'nuxt-simple-sitemap'
   ],
 
   // Nuxt Content Config
   content: {
     documentDriven: true,
   },
+
+  site: {
+    url: 'https://matthewporuben.com',
+  },
+
 
 })

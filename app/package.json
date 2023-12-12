@@ -8,15 +8,16 @@
     "gen": "nuxt generate",
     "serve:prod": "npm run gen && npx serve dist -p 3000",
     "build": "nuxt build",
-    "start": "nuxt start"
+    "start": "nuxt start",
+    "analyse": "npx nuxi analyze"
   },
   "dependencies": {
     "@nuxt/content": "^2.9.0",
-    "nuxt": "^3.8.2",
-    "sitemap": "^7.1.1"
+    "nuxt": "^3.8.2"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^3.0.2",
+    "nuxt-simple-sitemap": "^4.1.13",
     "sass": "^1.69.5"
   }
 }
