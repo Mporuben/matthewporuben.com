@@ -7,7 +7,6 @@
 <script lang="ts" setup>
 const route = useRoute();
 
-
 const { data } = await useAsyncData('count', () =>
   queryContent(route.path).only('maxWidth').findOne()
 )

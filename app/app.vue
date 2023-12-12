@@ -21,7 +21,6 @@
         </div>
       </header>
     </div>
-
     <NuxtPage/>
     <footer>
       <strong>Get in touch</strong>
