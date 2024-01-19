@@ -6,9 +6,7 @@ services:
     container_name: matthewporuben-cli
     working_dir: /app
     volumes:
-      - ./app:/app
-      - ./public:/app/public
-      - ./content:/app/content
+      - ./app:./
   dev:
     image: node:18-alpine
     container_name: matthewporuben-dev
@@ -19,7 +17,5 @@ services:
     expose:
       - 3000
     volumes:
-      - ./app:/app
-      - ./public:/app/public
-      - ./content:/app/content
+      - ./app:./
 
