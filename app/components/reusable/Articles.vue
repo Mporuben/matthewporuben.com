@@ -26,7 +26,7 @@
 </template>
 
 <script lang="ts" setup>
-import Badge from "~/components/reusable/Badge.vue";
+  import Badge from "~/components/reusable/Badge.vue";
 
   const props = defineProps({
     fulltextSearch: {

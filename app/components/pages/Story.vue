@@ -17,7 +17,6 @@
 
 <script lang="ts" setup>
   import Badge from '~/components/reusable/Badge.vue'
-  import Card from '~/components/reusable/Card.vue'
   import {computed} from "@vue/reactivity";
 
   const props = defineProps({
