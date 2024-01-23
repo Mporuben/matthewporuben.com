@@ -6,16 +6,17 @@
     "dev": "nuxt dev",
     "dev:docker": "rm -rf /tmp/nitro/worker-* && npm run dev",
     "gen": "nuxt generate",
+    "preview": "nuxt preview",
     "serve:prod": "npm run gen && npx serve dist -p 3000",
     "build": "nuxt build",
     "start": "nuxt start",
     "analyse": "npx nuxi analyze"
   },
   "dependencies": {
-    "@nuxt/content": "^2.10.0",
-    "nuxt": "^3.9.3"
+    "@nuxt/content": "^2.10.0"
   },
   "devDependencies": {
+    "nuxt": "^3.9.3",
     "nuxt-simple-sitemap": "^4.4.1",
     "sass": "^1.70.0"
   }
