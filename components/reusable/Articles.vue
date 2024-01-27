@@ -1,17 +1,17 @@
 <template>
   <div id="articles">
-    <ContentQuery 
-      path="/blog/articles" 
-      v-slot="{ data }" 
+    <ContentQuery
+      path="/blog/articles"
+      v-slot="{ data }"
       :limit="limit"
       :only="['title', 'description', 'cover', '_path', 'category', 'createdAt']"
     >
         <div class="articleCard" v-for="(article) in data" :key="article.slug">
-          <div class="previewImage" :style="getImage(article.cover)"></div>
+          <img class="previewImage" :src="article.cover" />
           <div class="content">
             <h2>{{article.title}}</h2>
             <p class="description">{{article.description}}</p>
-            <router-link :to="getLink(article._path)">Continue reading</router-link>
+            <router-link :to="article._path">Continue reading</router-link>
             <footer>
               <div>
                 <badge>{{article.category}}</badge>
@@ -26,32 +26,15 @@
 </template>
 
 <script lang="ts" setup>
-  import Badge from "~/components/reusable/Badge.vue";
+import Badge from "~/components/reusable/Badge.vue";
 
-  const props = defineProps({
-    fulltextSearch: {
-      type: String,
-      required: false
-    },
-    selectedCategories: {
-      type: Array,
-      required: false,
-      default: () => []
-    },
-    limit: {
-      type: Number,
-      required: false
-    }
-  })
 
-  watch(() =>props.fulltextSearch, ()=> console.log(props.fulltextSearch))
-
-  const getLink = (filePath: string) => {
-    const pathSplit = filePath.split('/')
-    return `/blog/articles/${pathSplit[pathSplit.length-1]}`
+const props = defineProps({
+  limit: {
+    type: Number,
+    required: false
   }
-
-  const getImage = (cover: string) => ({backgroundImage: `url('${cover}')` })
+})
 
 </script>
 
@@ -70,11 +53,9 @@ a
     color: white
     display: flex
     .previewImage
-      height: 368px
       flex: 2
-      background-position: center
-      background-size: cover
       border-radius: 15px
+      width: 50%
     .content
       padding-left: 20px
       flex: 2
