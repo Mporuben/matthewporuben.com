@@ -1,7 +1,4 @@
 export default defineNuxtConfig({
-  experimental: {
-    componentIslands: true // false or 'local+remote'
-  },
   app: {
     head: {
       htmlAttrs: {
@@ -40,11 +37,17 @@ export default defineNuxtConfig({
   // Nuxt Content Config
   content: {
     documentDriven: true,
+    highlight: {
+      theme: {default: 'light-plus'}
+    }
   },
 
   site: {
     url: 'https://matthewporuben.com',
   },
 
+  experimental: {
+    componentIslands: true // false or 'local+remote'
+  },
 
 })
