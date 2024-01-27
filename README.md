@@ -20,3 +20,9 @@
     ```
 
 rm -rf /tmp/nitro/worker-*
+
+
+## rsync list
+```bash
+rsync -av -e 'ssh -p 25888' ./app/.output/public uid1140413@shell.r4.websupport.sk:/home/matthewporuben.com/web/ 
+```
