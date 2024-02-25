@@ -14,15 +14,15 @@
     docker compose up dev
     ```
 
-3. generate static project
-    ```bash
-    docker compose run cli npm run gen --rm
-    ```
-
-rm -rf /tmp/nitro/worker-*
-
-
-## rsync list
+Generate static project
 ```bash
-rsync -av -e 'ssh -p 25888' ./app/.output/public uid1140413@shell.r4.websupport.sk:/home/matthewporuben.com/web/ 
+docker compose run cli npm run gen --rm
 ```
+
+
+Fix docker nitro worker error
+```
+rm -rf /tmp/nitro/worker-*
+```
+
+

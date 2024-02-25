@@ -1,20 +1,20 @@
 <template>
-  <div id="banner">
-    <div id="content">
-      <p id="title">Hi I am Matt</p>
-      <p id="bio">
-        <slot></slot>
-      </p>
+    <div id="banner">
+        <div id="content">
+            <p id="title">Hi I am Matt</p>
+            <p id="bio">
+                <slot></slot>
+            </p>
+        </div>
+        <div id="photo" :style="photoBackground"></div>
     </div>
-    <div id="photo" :style="photoBackground"></div>
-  </div>
 </template>
 
 <script lang="ts" setup>
 const photoBackground = computed(() => {
-  return {
-    backgroundImage: `url('/images/IMG_0396.jpeg')`
-  }
+    return {
+        backgroundImage: `url('/images/IMG_0396.jpeg')`
+    }
 })
 </script>
 
@@ -46,7 +46,7 @@ const photoBackground = computed(() => {
     margin: 0px 220px 100px 0px
     @media only screen and (max-width: 900px)
       z-index: 90
-      position: absolute  
+      position: absolute
       text-align: center
       margin: 0px
       display: flex

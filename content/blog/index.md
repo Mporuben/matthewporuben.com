@@ -1,7 +1,7 @@
 ---
 navigation:
 title: 'Blog'
-maxWidth: 900px
+maxWidth: 1000px
 ---
 
 :articles
