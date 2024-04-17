@@ -66,7 +66,7 @@
         &:hover
           color: rgba(255,255,255,0.5)
       .active
-        text-decoration: underline
+        color: var(--primary)
   footer
     width: 100%
     text-align: center

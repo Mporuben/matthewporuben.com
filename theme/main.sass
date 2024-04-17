@@ -1,9 +1,10 @@
 @font-face
   font-family: Main
-  src: url("/fonts/Poppins/poppins-regular.ttf")
+  src: url('/fonts/Poppins/poppins-regular.ttf')
   font-display: swap
 
 *
+  font-family: Main
   box-sizing: border-box
 
 html, body
@@ -11,15 +12,17 @@ html, body
   padding: 0
 
 body
+  font-family: Main
   --dark: #232733
   --dark-lighter: #394053
   --primary: #FFBF00
   --light: white
   --navy-light: #394053
-  font-family: Main
   background: var(--dark)
   color: var(--light)
   font-size: 16px
+
+
 a
   color: var(--primary)
   text-decoration: none
