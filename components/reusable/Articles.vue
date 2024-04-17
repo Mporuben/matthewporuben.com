@@ -7,7 +7,8 @@
       :only="['title', 'description', 'cover', '_path', 'category', 'createdAt']"
     >
         <div class="articleCard" v-for="(article) in data" :key="article.slug">
-          <img class="previewImage" :src="article.cover" />
+          <div class="previewImage" :style="{backgroundImage: `url('${article.cover}')`}" >
+          </div>
           <div class="content">
             <h2>{{article.title}}</h2>
             <p class="description">{{article.description}}</p>
@@ -55,6 +56,8 @@ a
     .previewImage
       flex: 2
       border-radius: 15px
+      background-size: cover
+      background-position: center
       width: 50%
     .content
       padding-left: 20px
@@ -81,6 +84,7 @@ a
       .previewImage
         flex: none
         width: 100%
+        height: 300px
       .content
         flex: none
 
