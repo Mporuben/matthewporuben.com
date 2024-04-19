@@ -6,7 +6,7 @@
 
 <style lang="sass" scoped>
 .card
-  background: #394053
+  background: var(--dark-lighter)
   padding: 20px
   border-radius: 20px
 </style>

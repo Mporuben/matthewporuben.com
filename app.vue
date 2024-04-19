@@ -45,8 +45,8 @@
       max-width: 1000px
       margin-top: 10px
       box-shadow: 5px 5px 20px rgba(0,0,0,0.4)
-      border-radius: 10px
-      background: #394053
+      border-radius: 40px
+      background: var(--dark-lighter)
       display: flex
       align-items: center
       justify-content: space-between
