@@ -4,24 +4,24 @@ title: 'About'
 maxWidth: 700px
 ---
 
- 
-::imageText{image='/images/me.jpeg' image-alt='photo of me'}  
+
+::imageText{image='/images/me.jpeg' image-alt='photo of me'}
 
 
 # About me
-So... Who am I? I don't like long and boring BIO's full of buzzwords. So I'll try to show you who am I on 
+So... Who am I? I don't like long and boring BIO's full of buzzwords. So I'll try to show you who am I on
 some things that I care about.
-  
+
 ::
 
 ## Teamwork
-It's most essential for me to provide value for people around me by doing my work. 
+It's most essential for me to provide value for people around me by doing my work.
 In my experience as a Labmaster (teacher) & member of team, by providing right amount of facilitation we
-empowers team to the best performance 
+empowers team to the best performance
 
 ## Technology
 I am a huge fan of the web stack. I'm not talking only about "websites" but the whole ecosystem of hybrid apps that runs on every device.
-As a developer, I love sharpening tech stack and working towards simpler and more concise code. I'm also trying my know-how share with people. 
+As a developer, I love sharpening tech stack and working towards simpler and more concise code. I'm also trying my know-how share with people.
 I've multiple public presentations and workshops on the topic of front-end & it's architecture.
 
 
