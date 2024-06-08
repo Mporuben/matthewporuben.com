@@ -31,7 +31,8 @@ export default defineNuxtConfig({
   // Nuxt modules
   modules: [
     '@nuxt/content',
-    'nuxt-simple-sitemap'
+    'nuxt-simple-sitemap',
+    '@nuxthq/studio'
   ],
 
   // Nuxt Content Config
