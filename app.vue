@@ -63,12 +63,13 @@ const closeMenu = () => {
     position: fixed
     z-index: 100
     #top_bar
-      padding: 0px 20px
+      padding: 0px 30px
+      padding-top: 2px
       width: 95%
-      height: 80px
+      height: 70px
       display: grid
       grid-template-columns: auto auto
-      grid-template-rows: 80px auto
+      grid-template-rows: 70px auto
       grid-template-areas: 'title navigation' 'expand expand'
       max-width: 1000px
       margin-top: 10px
@@ -101,6 +102,8 @@ const closeMenu = () => {
         transition: 0.5s ease
         &:hover
           color: rgba(255,255,255,0.5)
+        &.active
+          color: var(--primary)
     @media only screen and (max-width: 600px)
       #top_bar
         transition: 0.3s ease-in-out  all
