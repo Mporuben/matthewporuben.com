@@ -9,7 +9,7 @@
     <a href="https://www.linkedin.com/in/matthew-porueben/">
       <img alt="linkedin" class="socilIcon" src="/icons/logo-linkedin.svg">
     </a>
-    <a href="mailto:matt@matthewporuben.com">
+    <a href="mailto:matthew@poruben.com">
       <img alt="email" class="socilIcon" src="/icons/mail.svg">
     </a>
   </div>
